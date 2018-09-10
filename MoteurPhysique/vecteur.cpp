@@ -57,5 +57,4 @@ vector<int> vecteur::Multiplication_Scalaire(vector<int> a, int k,int dim)
 		result[i] = a[i] * k;
 	}
 	return result;
-	result;
 }
