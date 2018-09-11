@@ -1,18 +1,17 @@
 #include <iostream>
 #include <vector>
 #include "particule.h"
+#include "vecteur.h"
 
-vector <int> particule::position()
+
+int particule::Inverse_Masse(int Masse)
 {
-
+	int Inverse_Masse = 1/Masse;
+	return Inverse_Masse;
 }
 
-vector <int> particule::vitesse()
+void particule::Integrer(float temps)
 {
-
-}
-
-vector <int> particule::acceleration()
-{
-
+	position = Addition(Position ,Multiplication_Scalaire(Vitesse, temps,3),3);
+	vitesse = Addition(Multiplication_Scalaire(Vitesse ,Dumping) ,Multiplication_Scalaire(Acceleration, temps));
 }
