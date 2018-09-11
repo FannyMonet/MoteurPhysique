@@ -1,8 +1,9 @@
 #include "stdafx.h"
+#include "vecteur.h"
 #include <iostream>
 #include <vector>
 #include "particule.h"
-#include "vecteur.cpp"
+
 
 
 int particule::Inverse_Masse(int Masse)
@@ -13,6 +14,7 @@ int particule::Inverse_Masse(int Masse)
 
 void particule::Integrer(float temps)
 {
-	Position = (Addition(Position , Multiplication_Scalaire(Vitesse, temps,3),3),3);
-	Vitesse = Addition(Multiplication_Scalaire(Vitesse ,Dumping) ,Multiplication_Scalaire(Acceleration, temps));
+	vecteur test =  vecteur(x,y,z);
+	int position[3] = test.Addition(Position, vecteur::Multiplication_Scalaire(Vitesse, temps, 3), 3);
+	vitesse = Addition(Multiplication_Scalaire(Vitesse ,Dumping) ,Multiplication_Scalaire(Acceleration, temps));
 }

@@ -1,5 +1,6 @@
 #pragma once
 #include <vector>
+
 using namespace std;
 
 class particule
@@ -8,7 +9,7 @@ public:
 	float x;
 	float y;
 	float z;
-	vecteur vitesse = new vecteur(dx, dy, dz);
+	vecteur vitesse =  vecteur(dx, dy, dz);
 
 	int Dumping;
 	int Gravitation; 
