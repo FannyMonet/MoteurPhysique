@@ -5,9 +5,11 @@ using namespace std;
 class particule
 {
 public:
-	vector <int> Position(vector <int> a, int dim);
-	vector <int> Vitesse(vector <int> a, int dim);
-	vector <int> Acceleration(vector <int> a, int dim);
+	float x;
+	float y;
+	float z;
+	vecteur vitesse = new vecteur(dx, dy, dz);
+
 	int Dumping;
 	int Gravitation; 
 	int Inverse_Masse(int Masse);
