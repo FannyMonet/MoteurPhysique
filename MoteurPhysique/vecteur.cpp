@@ -2,15 +2,15 @@
 #include "stdafx.h"
 #include <iostream>
 #include "vecteur.h"
-
 #include <vector>
 using namespace std;
 
 
 
 
-std::vector<int> vecteur::Addition(std::vector<int> a, std::vector<int> b,int dim)
+vector<int> vecteur::Addition(vector<int> a, std::vector<int> b,int dim)
 {
+	
 	vector<int> result (dim);
 	for (int i = 0; i<dim; i++)
 	{
@@ -22,6 +22,7 @@ std::vector<int> vecteur::Addition(std::vector<int> a, std::vector<int> b,int di
 
 int vecteur::Produit_Scalaire(vector<int> a, vector<int> b, int dim)
 {
+	
 	int result = 0;
 	for (int i = 0; i<dim; i++)
 	{
