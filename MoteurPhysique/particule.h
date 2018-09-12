@@ -1,4 +1,7 @@
+
+#pragma once
 #include "stdafx.h"
+#include <vector>
 #include "vecteur.h"
 using namespace std;
 
@@ -17,7 +20,7 @@ public:
 		y = posy;
 		z = posz;
 	};
-
+	vector<float> position;
 	int Dumping;
 	int Gravitation; 
 	int Inverse_Masse(int Masse);
