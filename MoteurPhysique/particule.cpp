@@ -5,7 +5,6 @@
 #include "particule.h"
 
 
-
 int particule::Inverse_Masse(int Masse)
 {
 	int Inverse_Masse = 1/Masse;
@@ -14,7 +13,7 @@ int particule::Inverse_Masse(int Masse)
 
 void particule::Integrer(float temps)
 {
-	<int> test = new vecteur();
-	float position = vecteur::Addition(Position, vecteur::Multiplication_Scalaire(Vitesse, temps, 3), 3);
-	vitesse = vecteur::Addition(Multiplication_Scalaire(Vitesse ,Dumping) ,Multiplication_Scalaire(Acceleration, temps));
+	//<int> test = new vecteur();
+	//float position = vecteur::Addition(Position, vecteur::Multiplication_Scalaire(Vitesse, temps, 3), 3);
+	//vitesse = vecteur::Addition(Multiplication_Scalaire(Vitesse ,Dumping) ,Multiplication_Scalaire(Acceleration, temps));
 }

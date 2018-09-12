@@ -43,7 +43,6 @@ double vecteur::Norme()
 	}
 	result = sqrt(result);
 	return result;
-	
 }
 
 float* vecteur::Multiplication_Scalaire(int k)
