@@ -13,7 +13,10 @@ int particule::Inverse_Masse(int Masse)
 
 void particule::Integrer(float temps)
 {
-	//<int> test = new vecteur();
-	//float position = vecteur::Addition(Position, vecteur::Multiplication_Scalaire(Vitesse, temps, 3), 3);
-	//vitesse = vecteur::Addition(Multiplication_Scalaire(Vitesse ,Dumping) ,Multiplication_Scalaire(Acceleration, temps));
-}
+	x = x + vitesse.vec[0] * temps;
+	y = y + vitesse.vec[1]* temps;
+	z = z + vitesse.vec[2]* temps;
+	vitesse.vec[0] = vitesse.vec[0] * 0.7 - 9.81*temps;
+	vitesse.vec[1] = vitesse.vec[1] * 0.7 - 9.81*temps;
+	vitesse.vec[2] = vitesse.vec[2] * 0.7 - 9.81*temps;
+};
