@@ -16,5 +16,5 @@ void particule::Integrer(float temps)
 {
 	<int> test = new vecteur();
 	float position = vecteur::Addition(Position, vecteur::Multiplication_Scalaire(Vitesse, temps, 3), 3);
-	vitesse = Addition(Multiplication_Scalaire(Vitesse ,Dumping) ,Multiplication_Scalaire(Acceleration, temps));
+	vitesse = vecteur::Addition(Multiplication_Scalaire(Vitesse ,Dumping) ,Multiplication_Scalaire(Acceleration, temps));
 }
