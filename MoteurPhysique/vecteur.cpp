@@ -16,7 +16,7 @@ float* vecteur::Addition(float* v)
 
 float vecteur::Produit_Scalaire(float* v)
 {
-	int result;
+	float result;
 	for (int i = 0; i < 3; i++)
 	{
 		result += v[i] * vec[i];
