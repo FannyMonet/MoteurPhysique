@@ -1,5 +1,4 @@
-#pragma once
-#include <vector>
+#include "stdafx.h"
 #include "vecteur.h"
 using namespace std;
 
@@ -9,7 +8,7 @@ public:
 	float x;
 	float y;
 	float z;
-	vecteur vitesse;
+	vecteur vitesse = vecteur();
 
 	particule(float posx, float posy, float posz, float vitx, float vity, float vitz)
 	{

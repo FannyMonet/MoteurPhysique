@@ -1,7 +1,7 @@
 #include "stdafx.h"
-#include <iostream>
 #include "vecteur.h"
-#include <vector>
+#include <iostream>
+
 using namespace std;
 
 float* vecteur::Addition(float* v)
@@ -16,7 +16,7 @@ float* vecteur::Addition(float* v)
 
 float vecteur::Produit_Scalaire(float* v)
 {
-	float result;
+	int result =0;
 	for (int i = 0; i < 3; i++)
 	{
 		result += v[i] * vec[i];
@@ -43,7 +43,6 @@ double vecteur::Norme()
 	}
 	result = sqrt(result);
 	return result;
-	
 }
 
 float* vecteur::Multiplication_Scalaire(int k)
