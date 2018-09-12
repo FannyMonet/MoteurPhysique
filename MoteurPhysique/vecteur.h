@@ -1,26 +1,30 @@
 #include "stdafx.h"
 
-#include <vector>
 using namespace std;
 
-class vecteur 
+class vecteur
 {
 public:
-	float dx;
-	float dy;
-	float dz;
+
+	float vec[3];
+
+	vecteur()
+	{
+		vec[0] = 0;
+		vec[1] = 0;
+		vec[2] = 0;
+	};
 	vecteur(float dx,float dy,float dz)
 	{
-		vector<float> test(3, 0);
-		test[0] = dx ;
-		test[1] = dy;
-		test[2] = dz;
+		vec[0] = dx;
+		vec[1] = dy;
+		vec[2] = dz;
 	};
-	vector<int> Addition(vector<int> a, vector<int> b, int dim);
-	int Produit_Scalaire(vector<int> a, vector<int> b, int dim);
-	vector<int> Produit_de_Composante(vector<int> a, vector<int> b, int dim);
-	double Norme(vector<int> a, int dim);
-	vector<int> Multiplication_Scalaire(vector<int> a, int k, int dim);
+	float* Addition(float* vec);
+	float Produit_Scalaire(float* v);
+	float* Produit_de_Composante(float*);
+	double Norme();
+	float* Multiplication_Scalaire(int k);
 	//Calcul_Integral();
 };
 
