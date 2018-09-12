@@ -14,6 +14,8 @@ int particule::Inverse_Masse(int Masse)
 
 void particule::Integrer(float temps)
 {
+	position = {x, y, z};
+
 	<int> test = new vecteur();
 	float position = vecteur::Addition(Position, vecteur::Multiplication_Scalaire(Vitesse, temps, 3), 3);
 	vitesse = Addition(Multiplication_Scalaire(Vitesse ,Dumping) ,Multiplication_Scalaire(Acceleration, temps));
