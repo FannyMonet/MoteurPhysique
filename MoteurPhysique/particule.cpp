@@ -1,5 +1,4 @@
 #include "stdafx.h"
-#include "vecteur.h"
 #include <iostream>
 #include <vector>
 #include "particule.h"

@@ -1,19 +1,19 @@
 #include "stdafx.h"
 
-#include <vector>
 using namespace std;
 
-class vecteur 
+class vecteur
 {
 public:
 
 	float vec[3];
+
 	vecteur()
 	{
 		vec[0] = 0;
 		vec[1] = 0;
 		vec[2] = 0;
-	}
+	};
 	vecteur(float dx,float dy,float dz)
 	{
 		vec[0] = dx;
