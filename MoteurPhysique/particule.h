@@ -8,19 +8,14 @@ using namespace std;
 class particule
 {
 public:
-	float x;
-	float y;
-	float z;
+	vecteur position = vecteur();
 	vecteur vitesse = vecteur();
 
 	particule(float posx, float posy, float posz, float vitx, float vity, float vitz)
 	{
+		position = vecteur(posx, posy, posz);
 		vitesse = vecteur(vitx, vity, vitz);
-		x = posx;
-		y = posy;
-		z = posz;
 	};
-	vector<float> position;
 	int Dumping;
 	int Gravitation; 
 	int Inverse_Masse(int Masse);
