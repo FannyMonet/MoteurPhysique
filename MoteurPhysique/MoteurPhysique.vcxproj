@@ -156,6 +156,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="RegistreForce.h" />
     <ClInclude Include="MoteurPhysique.h" />
     <ClInclude Include="particule.h" />
     <ClInclude Include="Particuleforcegenerator.h" />
@@ -169,6 +170,7 @@
     <ClCompile Include="particule.cpp" />
     <ClCompile Include="Particuleforcegenerator.cpp" />
     <ClCompile Include="ParticuleSpring.cpp" />
+    <ClCompile Include="RegistreForce.cpp" />
     <ClCompile Include="stdafx.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>
