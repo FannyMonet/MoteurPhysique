@@ -10,6 +10,7 @@ class particule
 public:
 	vecteur position = vecteur();
 	vecteur vitesse = vecteur();
+	vecteur accumForce = vecteur();
 	int numero;
 	float dumping;
 	float masse;
@@ -21,6 +22,7 @@ public:
 		masse = m;
 		position = vecteur(posx, posy, posz);
 		vitesse = vecteur(vitx, vity, vitz);
+		accumForce = vecteur(0, 0, -9.81);
 	};
 	particule()
 	{
@@ -29,6 +31,7 @@ public:
 		masse = 0;
 		position = vecteur(0, 0, 0);
 		vitesse = vecteur(0, 0, 0);
+		accumForce = vecteur(0, 0, -9.81);
 	};
 	particule(const particule& particule)
 	{
@@ -37,10 +40,13 @@ public:
 		masse = particule.masse;
 		position = vecteur(particule.position.x, particule.position.y, particule.position.z);
 		vitesse = vecteur(particule.vitesse.x, particule.vitesse.y, particule.vitesse.z);
+		accumForce = vecteur(particule.accumForce.x, particule.accumForce.y, particule.accumForce.z);
 	}
 
 	int Dumping;
 	int Gravitation; 
 	int Inverse_Masse(int Masse);
 	void Integrer(float temps);
+	void addForce(const vecteur &force);
+	void clearAccum();
 };

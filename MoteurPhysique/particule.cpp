@@ -18,4 +18,18 @@ void particule::Integrer(float temps)
 	vitesse.x = vitesse.x * 0.7;
 	vitesse.y = vitesse.y * 0.7;
 	vitesse.z = vitesse.z*0.7 - 9.81*temps;
-};
+}
+
+void particule::addForce(const vecteur &force)
+{
+	accumForce.x += force.x;
+	accumForce.y += force.y;
+	accumForce.z += force.z;
+}
+
+void particule::clearAccum()
+{
+	accumForce.x = 0;
+	accumForce.y = 0;
+	accumForce.z = 0;
+}
