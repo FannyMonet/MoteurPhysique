@@ -3,6 +3,7 @@
 #include <vector>
 #include "vecteur.h"
 #include "particule.h"
+#include "Particuleforcegenerator.h"
 
 using namespace std;
 
@@ -10,8 +11,8 @@ class RegistresForces
 {
 	struct EnregistrementForce
 	{
-		Particule * particule;
-		ParticuleForceGenerateur * Fg;
+		particule * particule;
+		Particuleforcegenerator * Fg;
 	};
 	typedef std::vector<EnregistrementForce> Registre;
 
