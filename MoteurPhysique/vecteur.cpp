@@ -4,39 +4,37 @@
 
 using namespace std;
 
-float* vecteur::Addition(float* v)
+vecteur vecteur::Addition(vecteur &vec)
 {
-	float result[3];
-	result[0] = v[0] + x;
-	result[1] = v[1] + y;
-	result[2] = v[2] + z;
-	return result;
+	return vecteur();
 }
 
-float vecteur::Produit_Scalaire(float* v)
+float vecteur::Produit_Scalaire(vecteur &vec)
 {
-	return v[0] * x + v[1] * y + v[2] * z;
+	return 0;
 }
 
-float* vecteur::Produit_de_Composante(float* v)
+vecteur vecteur::Produit_de_Composante(vecteur &vec)
 {
-	float result[3];
-	result[0] = v[0] * x;
-	result[1] = v[1] * y;
-	result[2] = v[2] * z;
-	return result;
+	return vecteur();
 }
 
 double vecteur::Norme()
 {
-	return sqrt(x*x + y*y + z*z);
+	return 0;
 }
 
-float* vecteur::Multiplication_Scalaire(int k)
+vecteur vecteur::Multiplication_Scalaire(float k)
 {
-	float result[3];
-	result[0] = x * k;
-	result[1] = y * k;
-	result[2] = z * k;
-	return result;
+	return vecteur();
+}
+
+vecteur vecteur::addForce(vecteur &force)
+{
+	return vecteur();
+}
+
+vecteur vecteur::clearAccum()
+{
+	return vecteur();
 }
