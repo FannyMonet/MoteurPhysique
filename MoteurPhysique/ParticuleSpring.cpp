@@ -9,6 +9,10 @@ ParticuleSpring::ParticuleSpring()
 }
 
 
+ParticuleSpring::ParticuleSpring(particule * autreparticule, int k, double L0)
+{
+}
+
 ParticuleSpring::~ParticuleSpring()
 {
 }
