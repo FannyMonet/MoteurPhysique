@@ -159,6 +159,7 @@
     <ClInclude Include="ParticuleAnchoredSpring.h" />
     <ClInclude Include="ParticuleBouyancy.h" />
     <ClInclude Include="ParticuleBungee.h" />
+    <ClInclude Include="ParticuleStiffSpring.h" />
     <ClInclude Include="RegistreForce.h" />
     <ClInclude Include="MoteurPhysique.h" />
     <ClInclude Include="particule.h" />
@@ -178,6 +179,7 @@
     <ClCompile Include="ParticuleBungee.cpp" />
     <ClCompile Include="Particuleforcegenerator.cpp" />
     <ClCompile Include="ParticuleSpring.cpp" />
+    <ClCompile Include="ParticuleStiffSpring.cpp" />
     <ClCompile Include="RegistreForce.cpp" />
     <ClCompile Include="stdafx.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
