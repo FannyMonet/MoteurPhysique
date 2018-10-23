@@ -9,12 +9,13 @@ vecteur2D::vecteur2D()
 {
 	x = 0;
 	y = 0;
-};
+}
+
 vecteur2D::vecteur2D(float dx, float dy)
 {
 	x = dx;
 	y = dy;
-};
+}
 
 //Méthodes
 

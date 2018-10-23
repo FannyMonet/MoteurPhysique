@@ -49,23 +49,21 @@ public:
 		accumForce3D = vecteur3D(0, -9.81, 0);
 		dimension = 3;
 	};
-	particule(const particule& particule, int dim = 3)
+	particule(const particule& particule)
 	{
-		dimension = dim;
-		if (dim == 3)
+		dimension = particule.dimension;
+		numero = particule.numero;
+		dumping = particule.dumping;
+		masse = particule.masse;
+		if (dimension == 3)
 		{
-			numero = particule.numero;
-			dumping = particule.dumping;
-			masse = particule.masse;
+			
 			position3D = vecteur3D(particule.position3D.x, particule.position3D.y, particule.position3D.z);
 			vitesse3D = vecteur3D(particule.vitesse3D.x, particule.vitesse3D.y, particule.vitesse3D.z);
 			accumForce3D = vecteur3D(particule.accumForce3D.x, particule.accumForce3D.y, particule.accumForce3D.z);
 		}
-		else if (dim == 2)
+		else if (dimension == 2)
 		{
-			numero = particule.numero;
-			dumping = particule.dumping;
-			masse = particule.masse;
 			position2D = vecteur2D(particule.position2D.x, particule.position2D.y);
 			vitesse2D = vecteur2D(particule.vitesse2D.x, particule.vitesse2D.y);
 			accumForce2D = vecteur2D(particule.accumForce2D.x, particule.accumForce2D.y);

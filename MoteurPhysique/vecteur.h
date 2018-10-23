@@ -9,14 +9,6 @@ class vecteur
 public:
 
 	vecteur() {}
-
-	/*vecteur(float dx, float dy, float dz)
-	{
-		dx = x;
-		dy = y;
-		dz = z;
-	}
-*/
 	virtual vecteur Addition(vecteur &vec);
 	virtual float Produit_Scalaire(vecteur &vec);
 	virtual vecteur Produit_de_Composante(vecteur &vec);

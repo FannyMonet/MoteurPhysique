@@ -15,7 +15,7 @@ vecteur3D::vecteur3D(float dx, float dy, float dz)
 	x = dx;
 	y = dy;
 	z = dz;
-};
+}
 
 vecteur vecteur3D::Addition(vecteur3D &vec)
 {
