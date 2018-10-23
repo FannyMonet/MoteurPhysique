@@ -9,11 +9,21 @@ using namespace std;
 
 class RegistresForces
 {
+public:
 	struct EnregistrementForce
 	{
 		particule * particule;
 		Particuleforcegenerator * Fg;
-	};
+	}alpha;
 	typedef std::vector<EnregistrementForce> Registre;
 
+	Registre registre;
+
+
+	void AddEntity(particule * particule, Particuleforcegenerator * Fg);
+
+	void DeleteEntity(particule * particule, Particuleforcegenerator * Fg);
+
+	void UpdateEntity(double duration);
 };
+
