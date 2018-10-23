@@ -8,7 +8,6 @@ Particuleforcegenerator::Particuleforcegenerator()
 
 void Particuleforcegenerator::updateforceparticule(particule * particule, float duration)
 {
-	particule->Integrer(duration);
 }
 
 
