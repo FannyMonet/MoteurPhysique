@@ -8,6 +8,7 @@ class vecteur
 	
 public:
 
+
 	vecteur() {}
 	virtual vecteur Addition(vecteur &vec);
 	virtual float Produit_Scalaire(vecteur &vec);

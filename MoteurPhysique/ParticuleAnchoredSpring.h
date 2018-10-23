@@ -8,7 +8,8 @@ class ParticuleAnchoredSpring :
 public:
 	ParticuleAnchoredSpring();
 	~ParticuleAnchoredSpring();
-	vecteur pointancrage = vecteur();
+	vecteur2D pointancrage2D;
+	vecteur3D pointancrage3D;
 	particule autreparticule = particule();
 	int k = 0;
 	double L0 = 0;
