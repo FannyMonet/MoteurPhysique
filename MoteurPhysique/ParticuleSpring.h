@@ -6,11 +6,16 @@ class ParticuleSpring :
 	public Particuleforcegenerator
 {
 public:
-	ParticuleSpring(particule *autreparticule,int k, double L0);
-	~ParticuleSpring(); 
-	particule *autreparticule;
+	
+	particule autreparticule;
 	int k=0;
 	double L0=0;
+	ParticuleSpring(particule Vautreparticule, int Vk, double VL0)
+	{
+		k = Vk;
+		L0 = VL0;
+		autreparticule = Vautreparticule;
+	}
 
 	
 

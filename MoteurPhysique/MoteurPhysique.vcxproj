@@ -157,6 +157,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClInclude Include="ParticuleAnchoredSpring.h" />
+    <ClInclude Include="ParticuleBungee.h" />
     <ClInclude Include="RegistreForce.h" />
     <ClInclude Include="MoteurPhysique.h" />
     <ClInclude Include="particule.h" />
@@ -172,6 +173,7 @@
     <ClCompile Include="MoteurPhysique.cpp" />
     <ClCompile Include="particule.cpp" />
     <ClCompile Include="ParticuleAnchoredSpring.cpp" />
+    <ClCompile Include="ParticuleBungee.cpp" />
     <ClCompile Include="Particuleforcegenerator.cpp" />
     <ClCompile Include="ParticuleSpring.cpp" />
     <ClCompile Include="RegistreForce.cpp" />
