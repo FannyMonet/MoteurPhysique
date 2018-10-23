@@ -33,10 +33,13 @@
     <ClInclude Include="Particuleforcegenerator.h">
       <Filter>Fichiers d%27en-tête</Filter>
     </ClInclude>
+    <ClInclude Include="RegistreForce.h">
+      <Filter>Fichiers d%27en-tête</Filter>
+    </ClInclude>
     <ClInclude Include="ParticuleSpring.h">
       <Filter>Fichiers d%27en-tête</Filter>
     </ClInclude>
-    <ClInclude Include="RegistreForce.h">
+    <ClInclude Include="ParticuleAnchoredSpring.h">
       <Filter>Fichiers d%27en-tête</Filter>
     </ClInclude>
   </ItemGroup>
@@ -56,10 +59,13 @@
     <ClCompile Include="Particuleforcegenerator.cpp">
       <Filter>Fichiers sources</Filter>
     </ClCompile>
+    <ClCompile Include="RegistreForce.cpp">
+      <Filter>Fichiers sources</Filter>
+    </ClCompile>
     <ClCompile Include="ParticuleSpring.cpp">
       <Filter>Fichiers sources</Filter>
     </ClCompile>
-    <ClCompile Include="RegistreForce.cpp">
+    <ClCompile Include="ParticuleAnchoredSpring.cpp">
       <Filter>Fichiers sources</Filter>
     </ClCompile>
   </ItemGroup>

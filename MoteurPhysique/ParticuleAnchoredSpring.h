@@ -2,17 +2,19 @@
 #include "Particuleforcegenerator.h"
 #include "vecteur.h"
 using namespace std;
-class ParticuleSpring :
+class ParticuleAnchoredSpring :
 	public Particuleforcegenerator
 {
 public:
-	ParticuleSpring();
-	~ParticuleSpring(); 
+	ParticuleAnchoredSpring();
+	~ParticuleAnchoredSpring();
+	vecteur pointancrage = vecteur();
 	particule autreparticule = particule();
-	int k=0;
-	double L0=0;
+	int k = 0;
+	double L0 = 0;
 
 	virtual void updateforceparticule(particule particule, float duration);
 
 };
+
 
