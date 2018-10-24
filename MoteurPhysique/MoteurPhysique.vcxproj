@@ -42,7 +42,7 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
     <UseDebugLibraries>true</UseDebugLibraries>
-    <PlatformToolset>v141</PlatformToolset>
+    <PlatformToolset>v140</PlatformToolset>
     <CharacterSet>Unicode</CharacterSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
@@ -163,6 +163,9 @@
     <ClInclude Include="ParticuleContactResolver.h" />
     <ClInclude Include="ParticuleLink.h" />
     <ClInclude Include="ParticuleTige.h" />
+    <ClInclude Include="ParticuleBouyancy.h" />
+    <ClInclude Include="ParticuleBungee.h" />
+    <ClInclude Include="ParticuleStiffSpring.h" />
     <ClInclude Include="RegistreForce.h" />
     <ClInclude Include="MoteurPhysique.h" />
     <ClInclude Include="particule.h" />
@@ -183,10 +186,13 @@
     <ClCompile Include="ParticuleContact.cpp" />
     <ClCompile Include="ParticuleContactGenerator.cpp" />
     <ClCompile Include="ParticuleContactResolver.cpp" />
+    <ClCompile Include="ParticuleBouyancy.cpp" />
+    <ClCompile Include="ParticuleBungee.cpp" />
     <ClCompile Include="Particuleforcegenerator.cpp" />
     <ClCompile Include="ParticuleLink.cpp" />
     <ClCompile Include="ParticuleSpring.cpp" />
     <ClCompile Include="ParticuleTige.cpp" />
+    <ClCompile Include="ParticuleStiffSpring.cpp" />
     <ClCompile Include="RegistreForce.cpp" />
     <ClCompile Include="stdafx.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>

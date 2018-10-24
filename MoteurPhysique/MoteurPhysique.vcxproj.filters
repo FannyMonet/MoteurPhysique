@@ -67,6 +67,13 @@
       <Filter>Fichiers d%27en-tête</Filter>
     </ClInclude>
     <ClInclude Include="ParticuleTige.h">
+    <ClInclude Include="ParticuleBungee.h">
+      <Filter>Fichiers d%27en-tête</Filter>
+    </ClInclude>
+    <ClInclude Include="ParticuleBouyancy.h">
+      <Filter>Fichiers d%27en-tête</Filter>
+    </ClInclude>
+    <ClInclude Include="ParticuleStiffSpring.h">
       <Filter>Fichiers d%27en-tête</Filter>
     </ClInclude>
   </ItemGroup>
@@ -117,6 +124,13 @@
       <Filter>Fichiers sources</Filter>
     </ClCompile>
     <ClCompile Include="ParticuleTige.cpp">
+    <ClCompile Include="ParticuleBungee.cpp">
+      <Filter>Fichiers sources</Filter>
+    </ClCompile>
+    <ClCompile Include="ParticuleBouyancy.cpp">
+      <Filter>Fichiers sources</Filter>
+    </ClCompile>
+    <ClCompile Include="ParticuleStiffSpring.cpp">
       <Filter>Fichiers sources</Filter>
     </ClCompile>
   </ItemGroup>
