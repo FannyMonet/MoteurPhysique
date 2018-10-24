@@ -9,6 +9,7 @@ public:
 	float maxLength;
 
 	ParticuleCable();
+	ParticuleCable(particule *p1, particule *p2, float maxLength, float restitution);
 
 	float currentLength();
 	void ajouterContact();

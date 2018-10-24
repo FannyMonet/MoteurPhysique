@@ -4,8 +4,9 @@
 
 ParticuleContact::ParticuleContact()
 {
-
 }
+
+// Constructeur de ParticuleContact
 ParticuleContact::ParticuleContact(particule *p1, particule *p2, float Vrestitution, float Vpenetration)
 {
 	particules[0] = p1;
@@ -14,12 +15,13 @@ ParticuleContact::ParticuleContact(particule *p1, particule *p2, float Vrestitut
 	penetration = Vpenetration;
 }
 
-
+// Résout le contact entre les deux particules
 void ParticuleContact::resolve(float duree)
 {
 	resolveVelocity(duree);
 	resolveInterpenetration();
 }
+// On calcule la vélocité d'éloignement des particules
 float ParticuleContact::calculerVs()
 {
 	particule *p1 = particules[0];
@@ -34,6 +36,8 @@ float ParticuleContact::calculerVs()
 	float vs = diff.Produit_Scalaire(diff);
 	return vs;
 }
+// A l'aide de vs et du coefficient de restitution, on modifie les vecteurs vitesse des particules et on calcule leurs 
+// nouvelles positions et vitesses à la frame suivante.
 void ParticuleContact::resolveVelocity(float duree)
 {
 	float vs = calculerVs();
@@ -48,7 +52,8 @@ void ParticuleContact::resolveVelocity(float duree)
 	p1->Integrer(duree);
 	p2->Integrer(duree);
 }
-
+// Avec le coefficient de penetration, on résout l'interpénétration des deux particules
+// afin d'éviter qu'elles se chevauchent (dans le cas d'un coefficient de restitution trop faible)
 void ParticuleContact::resolveInterpenetration()
 {
 	particule *p1 = particules[0];

@@ -6,7 +6,8 @@ ParticuleContactResolver::ParticuleContactResolver()
 {
 }
 
-
+//Fonction récursive parcourant toutes les collisions listées dans listCollisions et les résolvant, jusqu'à 
+// un maximum d'itéractions 
 void ParticuleContactResolver::resolveContacts(int iterationsUsed, float duree, int nbCollisions, int nbIterationsMax)
 {
 	nbCollisions = listCollisions.size();
@@ -22,7 +23,5 @@ void ParticuleContactResolver::resolveContacts(int iterationsUsed, float duree, 
 		listCollisions[i].resolve(duree);
 		iterationsUsed++;
 	}
-	//maj la listCollision
-
 	resolveContacts(iterationsUsed, duree, nbCollisions, nbIterationsMax);
 }

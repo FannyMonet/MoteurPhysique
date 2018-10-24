@@ -5,7 +5,13 @@
 ParticuleCable::ParticuleCable()
 {
 }
-
+ParticuleCable::ParticuleCable(particule *p1, particule *p2, float mLength, float r)
+{
+	particules[0] = p1;
+	particules[1] = p2;
+	maxLength = mLength;
+	restitution = r;
+}
 float ParticuleCable::currentLength()
 {
 	particule *p1 = particules[0];

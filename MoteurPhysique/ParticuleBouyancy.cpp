@@ -1,8 +1,6 @@
 #include "stdafx.h"
 #include "ParticuleBouyancy.h"
 
-
-
 void ParticuleBouyancy::updateforceparticule(particule particule, float duration)
 {
 	vecteur3D force(0, 0, 0);

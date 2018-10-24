@@ -12,7 +12,7 @@ void RegistresForces::AddEntity(particule * particule, Particuleforcegenerator *
 	en.Fg = Fg;
 	registre.emplace_back(en);
 }
-// Supprime la particule et sa force associé de la liste des particules : registre /
+// Supprime la particule et sa force associé de la liste des particules : registre 
 void RegistresForces::DeleteEntity(particule * particule, Particuleforcegenerator * Fg)
 {
 	for (int i = 0; i < registre.size(); i++) {
@@ -22,7 +22,7 @@ void RegistresForces::DeleteEntity(particule * particule, Particuleforcegenerato
 	}
 }
 
-// Mis à jour des Forces
+// Mise à jour des Forces
 void RegistresForces::UpdateEntity(double duration) {
 	for (int i = 0; i < registre.size(); i++) {
 		registre[i].Fg->updateforceparticule(registre[i].particule, duration);

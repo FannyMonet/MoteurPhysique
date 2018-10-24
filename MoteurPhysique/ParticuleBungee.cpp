@@ -1,17 +1,9 @@
 #include "stdafx.h"
 #include "ParticuleBungee.h"
 
-
-
-
-
-
-
-
 void ParticuleBungee::updateforceparticule(particule particule, float duration)
 {
 	if (sqrt(autreparticule.position3D.x*autreparticule.position3D.x + autreparticule.position3D.y*autreparticule.position3D.y + autreparticule.position3D.z*autreparticule.position3D.z) >= L0)
-		//int force;
 	{
 		int dim = particule.dimension;
 		double deltax = dim == 3 ? particule.position3D.x - autreparticule.position3D.x : particule.position2D.x - autreparticule.position2D.x;
@@ -19,10 +11,6 @@ void ParticuleBungee::updateforceparticule(particule particule, float duration)
 		double deltaz;
 		if (dim == 3)
 			deltaz = particule.position3D.z - autreparticule.position3D.z;
-
-
-		vector<int> force;
-
 
 		if (dim == 2)
 		{
@@ -34,7 +22,5 @@ void ParticuleBungee::updateforceparticule(particule particule, float duration)
 			const  vecteur3D forceCst(-k*(sqrt(deltax*deltax) - L0), -k*(sqrt(deltay*deltay) - L0), -k*(sqrt(deltaz*deltaz) - L0));
 			particule.addForce(forceCst);
 		}
-
 	}
-
 }
