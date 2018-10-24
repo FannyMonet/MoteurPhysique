@@ -10,6 +10,7 @@ GeneratorForceGravite::GeneratorForceGravite()
 
 void GeneratorForceGravite::updateforceparticule(particule particule, float duration)
 {
+
 	int dim = particule.dimension;
 	if (dim == 2)
 	{
