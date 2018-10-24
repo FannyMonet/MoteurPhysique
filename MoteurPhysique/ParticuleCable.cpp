@@ -25,6 +25,5 @@ void ParticuleCable::ajouterContact()
 	if (currentLength() >= maxLength)
 	{
 		ParticuleContact contact = ParticuleContact(particules[0], particules[1], restitution, 0.7);
-		pcr.listCollisions.emplace_back(contact);
 	}
 }
