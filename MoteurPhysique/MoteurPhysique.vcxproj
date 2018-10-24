@@ -156,6 +156,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="GeneratorForceGravite.h" />
     <ClInclude Include="ParticuleAnchoredSpring.h" />
     <ClInclude Include="ParticuleBouyancy.h" />
     <ClInclude Include="ParticuleBungee.h" />
@@ -172,6 +173,7 @@
     <ClInclude Include="vecteur3D.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="GeneratorForceGravite.cpp" />
     <ClCompile Include="MoteurPhysique.cpp" />
     <ClCompile Include="particule.cpp" />
     <ClCompile Include="ParticuleAnchoredSpring.cpp" />
