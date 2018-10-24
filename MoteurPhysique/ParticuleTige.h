@@ -4,8 +4,11 @@ class ParticuleTige : ParticuleLink
 {
 public:
 
-	float longueur;
+	//particule *particules[2];
+	float longueur; //longueur de la tige
 
 	ParticuleTige();
+
+	void ajouterContact();
 };
 

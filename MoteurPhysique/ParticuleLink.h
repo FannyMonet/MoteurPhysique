@@ -8,11 +8,11 @@ class ParticuleLink : ParticuleContactGenerator
 public:
 
 	particule *particules[2];
-	int currentLength;
 
 	ParticuleLink();
 	ParticuleLink(particule *p1, particule *p2);
 
-	void ajouterContact(ParticuleContact contact);
+	virtual void ajouterContact();
+	virtual float currentLength();
 };
 

@@ -7,6 +7,10 @@ public:
 
 	float restitution;
 	float maxLength;
+
 	ParticuleCable();
+
+	float currentLength();
+	void ajouterContact();
 };
 

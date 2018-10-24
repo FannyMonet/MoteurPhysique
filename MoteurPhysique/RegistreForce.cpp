@@ -5,9 +5,6 @@
 
 using namespace std;
 
-//RegistresForces::RegistresForces() {
-//	this->registre = Registre();
-//}
 //Ajoute une particule et sa force dans EnregistrementForce la liste des particules : registre
 void RegistresForces::AddEntity(particule * particule, Particuleforcegenerator * Fg) {
 	EnregistrementForce en;
