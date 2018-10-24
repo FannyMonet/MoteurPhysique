@@ -42,7 +42,7 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
     <UseDebugLibraries>true</UseDebugLibraries>
-    <PlatformToolset>v140</PlatformToolset>
+    <PlatformToolset>v141</PlatformToolset>
     <CharacterSet>Unicode</CharacterSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
@@ -158,6 +158,12 @@
   <ItemGroup>
     <ClInclude Include="GeneratorForceGravite.h" />
     <ClInclude Include="ParticuleAnchoredSpring.h" />
+    <ClInclude Include="ParticuleCable.h" />
+    <ClInclude Include="ParticuleContact.h" />
+    <ClInclude Include="ParticuleContactGenerator.h" />
+    <ClInclude Include="ParticuleContactResolver.h" />
+    <ClInclude Include="ParticuleLink.h" />
+    <ClInclude Include="ParticuleTige.h" />
     <ClInclude Include="ParticuleBouyancy.h" />
     <ClInclude Include="ParticuleBungee.h" />
     <ClInclude Include="ParticuleStiffSpring.h" />
@@ -166,6 +172,7 @@
     <ClInclude Include="particule.h" />
     <ClInclude Include="Particuleforcegenerator.h" />
     <ClInclude Include="ParticuleSpring.h" />
+    <ClInclude Include="resource.h" />
     <ClInclude Include="stdafx.h" />
     <ClInclude Include="targetver.h" />
     <ClInclude Include="vecteur.h" />
@@ -177,10 +184,16 @@
     <ClCompile Include="MoteurPhysique.cpp" />
     <ClCompile Include="particule.cpp" />
     <ClCompile Include="ParticuleAnchoredSpring.cpp" />
+    <ClCompile Include="ParticuleCable.cpp" />
+    <ClCompile Include="ParticuleContact.cpp" />
+    <ClCompile Include="ParticuleContactGenerator.cpp" />
+    <ClCompile Include="ParticuleContactResolver.cpp" />
     <ClCompile Include="ParticuleBouyancy.cpp" />
     <ClCompile Include="ParticuleBungee.cpp" />
     <ClCompile Include="Particuleforcegenerator.cpp" />
+    <ClCompile Include="ParticuleLink.cpp" />
     <ClCompile Include="ParticuleSpring.cpp" />
+    <ClCompile Include="ParticuleTige.cpp" />
     <ClCompile Include="ParticuleStiffSpring.cpp" />
     <ClCompile Include="RegistreForce.cpp" />
     <ClCompile Include="stdafx.cpp">
@@ -196,6 +209,9 @@
   <ItemGroup>
     <None Include="freeglut.dll" />
     <None Include="glew32.dll" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="MoteurPhysique.rc" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

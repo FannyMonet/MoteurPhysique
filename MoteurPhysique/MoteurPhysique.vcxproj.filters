@@ -1,109 +1,51 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <Filter Include="Fichiers sources">
-      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
-      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
-    </Filter>
-    <Filter Include="Fichiers d%27en-tête">
-      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
-      <Extensions>h;hh;hpp;hxx;hm;inl;inc;xsd</Extensions>
-    </Filter>
-    <Filter Include="Fichiers de ressources">
-      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
-      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
-    </Filter>
+    <ClCompile Include="MoteurPhysique.cpp" />
+    <ClCompile Include="particule.cpp" />
+    <ClCompile Include="ParticuleAnchoredSpring.cpp" />
+    <ClCompile Include="ParticuleCable.cpp" />
+    <ClCompile Include="ParticuleContact.cpp" />
+    <ClCompile Include="ParticuleContactGenerator.cpp" />
+    <ClCompile Include="ParticuleContactResolver.cpp" />
+    <ClCompile Include="ParticuleBouyancy.cpp" />
+    <ClCompile Include="ParticuleBungee.cpp" />
+    <ClCompile Include="Particuleforcegenerator.cpp" />
+    <ClCompile Include="ParticuleLink.cpp" />
+    <ClCompile Include="ParticuleSpring.cpp" />
+    <ClCompile Include="ParticuleTige.cpp" />
+    <ClCompile Include="ParticuleStiffSpring.cpp" />
+    <ClCompile Include="RegistreForce.cpp" />
+    <ClCompile Include="stdafx.cpp" />
+    <ClCompile Include="vecteur.cpp" />
+    <ClCompile Include="vecteur2D.cpp" />
+    <ClCompile Include="vecteur3D.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="stdafx.h">
-      <Filter>Fichiers d%27en-tête</Filter>
-    </ClInclude>
-    <ClInclude Include="targetver.h">
-      <Filter>Fichiers d%27en-tête</Filter>
-    </ClInclude>
-    <ClInclude Include="vecteur.h">
-      <Filter>Fichiers d%27en-tête</Filter>
-    </ClInclude>
-    <ClInclude Include="particule.h">
-      <Filter>Fichiers d%27en-tête</Filter>
-    </ClInclude>
-    <ClInclude Include="MoteurPhysique.h">
-      <Filter>Fichiers d%27en-tête</Filter>
-    </ClInclude>
-    <ClInclude Include="Particuleforcegenerator.h">
-      <Filter>Fichiers d%27en-tête</Filter>
-    </ClInclude>
-    <ClInclude Include="RegistreForce.h">
-      <Filter>Fichiers d%27en-tête</Filter>
-    </ClInclude>
-    <ClInclude Include="ParticuleSpring.h">
-      <Filter>Fichiers d%27en-tête</Filter>
-    </ClInclude>
-    <ClInclude Include="ParticuleAnchoredSpring.h">
-      <Filter>Fichiers d%27en-tête</Filter>
-    </ClInclude>
-    <ClInclude Include="vecteur2D.h">
-      <Filter>Fichiers d%27en-tête</Filter>
-    </ClInclude>
-    <ClInclude Include="vecteur3D.h">
-      <Filter>Fichiers d%27en-tête</Filter>
-    </ClInclude>
-    <ClInclude Include="ParticuleBungee.h">
-      <Filter>Fichiers d%27en-tête</Filter>
-    </ClInclude>
-    <ClInclude Include="ParticuleBouyancy.h">
-      <Filter>Fichiers d%27en-tête</Filter>
-    </ClInclude>
-    <ClInclude Include="ParticuleStiffSpring.h">
-      <Filter>Fichiers d%27en-tête</Filter>
-    </ClInclude>
-    <ClInclude Include="GeneratorForceGravite.h">
-      <Filter>Fichiers d%27en-tête</Filter>
-    </ClInclude>
+    <ClInclude Include="ParticuleAnchoredSpring.h" />
+    <ClInclude Include="ParticuleCable.h" />
+    <ClInclude Include="ParticuleContact.h" />
+    <ClInclude Include="ParticuleContactGenerator.h" />
+    <ClInclude Include="ParticuleContactResolver.h" />
+    <ClInclude Include="ParticuleLink.h" />
+    <ClInclude Include="ParticuleTige.h" />
+    <ClInclude Include="ParticuleBouyancy.h" />
+    <ClInclude Include="ParticuleBungee.h" />
+    <ClInclude Include="ParticuleStiffSpring.h" />
+    <ClInclude Include="RegistreForce.h" />
+    <ClInclude Include="MoteurPhysique.h" />
+    <ClInclude Include="particule.h" />
+    <ClInclude Include="Particuleforcegenerator.h" />
+    <ClInclude Include="ParticuleSpring.h" />
+    <ClInclude Include="resource.h" />
+    <ClInclude Include="stdafx.h" />
+    <ClInclude Include="targetver.h" />
+    <ClInclude Include="vecteur.h" />
+    <ClInclude Include="vecteur2D.h" />
+    <ClInclude Include="vecteur3D.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="stdafx.cpp">
-      <Filter>Fichiers sources</Filter>
-    </ClCompile>
-    <ClCompile Include="MoteurPhysique.cpp">
-      <Filter>Fichiers sources</Filter>
-    </ClCompile>
-    <ClCompile Include="vecteur.cpp">
-      <Filter>Fichiers sources</Filter>
-    </ClCompile>
-    <ClCompile Include="particule.cpp">
-      <Filter>Fichiers sources</Filter>
-    </ClCompile>
-    <ClCompile Include="Particuleforcegenerator.cpp">
-      <Filter>Fichiers sources</Filter>
-    </ClCompile>
-    <ClCompile Include="RegistreForce.cpp">
-      <Filter>Fichiers sources</Filter>
-    </ClCompile>
-    <ClCompile Include="ParticuleSpring.cpp">
-      <Filter>Fichiers sources</Filter>
-    </ClCompile>
-    <ClCompile Include="ParticuleAnchoredSpring.cpp">
-      <Filter>Fichiers sources</Filter>
-    </ClCompile>
-    <ClCompile Include="vecteur2D.cpp">
-      <Filter>Fichiers sources</Filter>
-    </ClCompile>
-    <ClCompile Include="vecteur3D.cpp">
-      <Filter>Fichiers sources</Filter>
-    </ClCompile>
-    <ClCompile Include="ParticuleBungee.cpp">
-      <Filter>Fichiers sources</Filter>
-    </ClCompile>
-    <ClCompile Include="ParticuleBouyancy.cpp">
-      <Filter>Fichiers sources</Filter>
-    </ClCompile>
-    <ClCompile Include="ParticuleStiffSpring.cpp">
-      <Filter>Fichiers sources</Filter>
-    </ClCompile>
-    <ClCompile Include="GeneratorForceGravite.cpp">
-      <Filter>Fichiers sources</Filter>
-    </ClCompile>
+    <ResourceCompile Include="MoteurPhysique.rc" />
   </ItemGroup>
   <ItemGroup>
     <None Include="freeglut.dll" />
