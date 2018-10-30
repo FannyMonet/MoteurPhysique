@@ -18,7 +18,10 @@ void particule::Integrer(float temps)
 		position3D.y = position3D.y + vitesse3D.y* temps;
 		position3D.z = position3D.z + vitesse3D.y* temps;
 		vitesse3D.x = vitesse3D.x * 0.7 + accumForce3D.x * temps;
-		vitesse3D.y = vitesse3D.y * 0.7 - 9.81*temps + accumForce3D.y * temps;
+
+		//vitesse3D.y = vitesse3D.y * 0.7 - 9.81*temps + accumForce3D.y * temps;
+		vitesse3D.y = vitesse3D.y * 0.7 + accumForce3D.y * temps;
+
 		vitesse3D.z = vitesse3D.z * 0.7 + accumForce3D.z * temps;
 	}
 	else if(dimension == 2)
@@ -26,7 +29,9 @@ void particule::Integrer(float temps)
 		position2D.x = position2D.x + vitesse2D.x * temps;
 		position2D.y = position2D.y + vitesse2D.y* temps;
 		vitesse2D.x = vitesse2D.x * 0.7 + accumForce2D.x * temps;
-		vitesse2D.y = vitesse2D.y * 0.7 - 9.81*temps + accumForce2D.y * temps;
+
+		//vitesse2D.y = vitesse2D.y * 0.7 - 9.81*temps + accumForce2D.y * temps;
+		vitesse2D.y = vitesse2D.y * 0.7 + accumForce2D.y * temps;
 	}
 	
 }
@@ -51,4 +56,9 @@ void particule::clearAccum()
 	accumForce3D.z = 0;
 	accumForce2D.x = 0;
 	accumForce2D.y = 0;
+}
+
+float particule::distance(const particule &particule)
+{
+	return sqrt((position3D.x - particule.position3D.x)*(position3D.x - particule.position3D.x) + (position3D.y - particule.position3D.y)*(position3D.y - position3D.y));
 }

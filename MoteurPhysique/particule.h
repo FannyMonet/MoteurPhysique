@@ -18,26 +18,29 @@ public:
 	float dumping;
 	float masse;
 	int dimension;
+	float rayon;
 
-	particule(float posx, float posy, float posz, float vitx, float vity, float vitz, int n, int d, float m)
+	particule(float posx, float posy, float posz, float vitx, float vity, float vitz, int n, float d, float m, float r)
 	{
 		numero = n;
 		dumping = d;
 		masse = m;
 		position3D = vecteur3D(posx, posy, posz);
 		vitesse3D = vecteur3D(vitx, vity, vitz);
-		accumForce3D = vecteur3D(0, -9.81, 0);
+		accumForce3D = vecteur3D(0, 0, 0);
 		dimension = 3;
+		rayon = r;
 	};
-	particule(float posx, float posy, float vitx, float vity, int n, int d, float m)
+	particule(float posx, float posy, float vitx, float vity, int n, float d, float m, float r)
 	{
 		numero = n;
 		dumping = d;
 		masse = m;
 		position2D = vecteur2D(posx, posy);
 		vitesse2D = vecteur2D(vitx, vity);
-		accumForce2D = vecteur2D(0, -9.81);
+		accumForce2D = vecteur2D(0, 0);
 		dimension = 2;
+		rayon = r;
 	};
 	particule()
 	{
@@ -46,8 +49,9 @@ public:
 		masse = 0;
 		position3D = vecteur3D(0, 0, 0);
 		vitesse3D = vecteur3D(0, 0, 0);
-		accumForce3D = vecteur3D(0, -9.81, 0);
+		accumForce3D = vecteur3D(0, 0, 0);
 		dimension = 3;
+		rayon = 5;
 	};
 	particule(const particule& particule)
 	{
@@ -55,6 +59,7 @@ public:
 		numero = particule.numero;
 		dumping = particule.dumping;
 		masse = particule.masse;
+		rayon = particule.rayon;
 		if (dimension == 3)
 		{
 			
@@ -70,11 +75,10 @@ public:
 		}
 	}
 
-	int Dumping;
-	int Gravitation; 
 	int Inverse_Masse(int Masse);
 	void Integrer(float temps);
 	void addForce(const vecteur3D &force);
 	void addForce(const vecteur2D &force);
 	void clearAccum();
+	float distance(const particule &particule);
 };
