@@ -7,7 +7,7 @@
 
 using namespace std;
 
-class RegistresForces
+class RegistreForce
 {
 public:
 	struct EnregistrementForce

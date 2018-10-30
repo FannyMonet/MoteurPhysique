@@ -1,6 +1,6 @@
 #pragma once
 #include "ParticuleContact.h"
-
+#include "particule.h"
 class ParticuleContactResolver
 {
 public:
@@ -9,6 +9,8 @@ public:
 	float duree;
 	ParticuleContactResolver();
 
-	void resolveContacts(int iterationsUsed, float duree, int nbCollisions, int nbIterationsMax);
+	vector<particule> resolveContacts(vector<particule>listParticules);
+	void detectContact(vector<particule>listParticules);
+	int indexMinVs(vector<ParticuleContact> listCollisions);
 };
 

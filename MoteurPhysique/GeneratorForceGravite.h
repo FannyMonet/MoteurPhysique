@@ -6,11 +6,9 @@ class GeneratorForceGravite :
 {
 public:
 	
-
-
 	GeneratorForceGravite();
 	vecteur3D gravite3D;
 	vecteur2D gravite2D;
-	virtual void updateforceparticule(particule particule, float duration);
+	virtual void updateforceparticule(particule* particule, float duration);
 };
 
