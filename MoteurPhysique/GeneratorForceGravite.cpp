@@ -19,7 +19,7 @@ void GeneratorForceGravite::updateforceparticule(particule* particule, float dur
 	if (dim == 3)
 	{
 		
-		particule->addForce(gravite3D);
+		particule->addForce(vecteur3D(gravite3D.x, gravite3D.y * particule->masse, gravite3D.z));
 	}
 }
 
