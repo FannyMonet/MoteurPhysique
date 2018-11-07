@@ -4,12 +4,13 @@
 
 GameWorld::GameWorld()
 {
-	listParticules.emplace_back(5, 5, 5, 10, 50, 20, 1, 0.7f, 4, 5);
-	listParticules.emplace_back(5, 5, 5, 0, 40, 0, 2, 0.7f, 4, 5);
-	listParticules.emplace_back(5, 5, 5, 3, 25, 30, 3, 0.7f, 4, 5);
+	listParticules.emplace_back(5, 2, 10, 300, 200, 20, 1, 0.7f, 2, 1);
+	listParticules.emplace_back(30, 40, 5, 0, 40, 0, 2, 0.7f, 4, 1);
+	listParticules.emplace_back(10, 30, 6, 30, 25, 30, 3, 0.7f, 6, 1);
 	registre = RegistreForce();
 	resolver = ParticuleContactResolver();
 	graviteGenerator = GeneratorForceGravite();
+	dragGenerator = DragGenerator(0.2, 0.3);
 }
 
 void GameWorld::update(float rate)
@@ -20,6 +21,8 @@ void GameWorld::update(float rate)
 
 void GameWorld::integrer(float rate)
 {
+
+	dragGenerator.updateforceparticule(&listParticules[0], rate);
 	for (int i = 0; i < listParticules.size(); i++)
 	{
 		graviteGenerator.updateforceparticule(&listParticules[i], rate);

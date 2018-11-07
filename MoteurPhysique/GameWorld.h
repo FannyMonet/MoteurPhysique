@@ -3,6 +3,7 @@
 #include "RegistreForce.h"
 #include "ParticuleContactResolver.h"
 #include "GeneratorForceGravite.h"
+#include "DragGenerator.h"
 
 class GameWorld
 {
@@ -11,6 +12,7 @@ public:
 	RegistreForce registre;
 	ParticuleContactResolver resolver;
 	GeneratorForceGravite graviteGenerator;
+	DragGenerator dragGenerator;
 
 	GameWorld();
 
