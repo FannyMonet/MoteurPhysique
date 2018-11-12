@@ -18,8 +18,8 @@ ParticuleContact::ParticuleContact(particule *p1, particule *p2, float Vrestitut
 // Résout le contact entre les deux particules
 void ParticuleContact::resolve(float duree)
 {
-	resolveVelocity(duree);
 	resolveInterpenetration();
+	resolveVelocity(duree);
 }
 // On calcule la vélocité d'éloignement des particules
 float ParticuleContact::calculerVs()
