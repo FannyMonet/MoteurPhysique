@@ -25,17 +25,6 @@ Matrice3::Matrice3()
 {
 	coef[0], coef[1], coef[2], coef[3], coef[4], coef[5], coef[6], coef[7], coef[8] = 0;
 }
-/*
-	'a' : 0
-	'b' : 1
-	'c' : 2
-	'd' : 3
-	'e' : 4
-	'f' : 5
-	'g' : 6
-	'h' : 7
-	'i' : 8
-*/
 Matrice3 Matrice3::inverse()
 {
 	double det = coef[0]*coef[4]*coef[8] + coef[3]*coef[7]*coef[2] + coef[6]*coef[1]*coef[5] - coef[0]*coef[7]*coef[5] - coef[6]*coef[4]*coef[2] - coef[3]*coef[1]*coef[8];
