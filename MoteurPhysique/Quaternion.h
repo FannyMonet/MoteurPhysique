@@ -1,5 +1,6 @@
 #pragma once
 #include "vecteur3D.h"
+#include "Matrice3.h"
 
 class Quaternion
 {
@@ -16,6 +17,6 @@ public:
 	Quaternion operator*=(Quaternion q);
 	void effectuerRotation(vecteur3D v);
 	void updateVelociteAngulaire(vecteur3D velocite, float temps);
-
+	Matrice3 convertToMatrice();
 };
 
