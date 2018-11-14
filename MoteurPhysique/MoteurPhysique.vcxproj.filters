@@ -99,6 +99,9 @@
     <ClInclude Include="GameWorld.h">
       <Filter>Fichiers d%27en-tête</Filter>
     </ClInclude>
+    <ClInclude Include="Matrice3.h">
+      <Filter>Fichiers d%27en-tête</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="stdafx.cpp">
@@ -165,6 +168,9 @@
       <Filter>Fichiers sources</Filter>
     </ClCompile>
     <ClCompile Include="GameWorld.cpp">
+      <Filter>Fichiers sources</Filter>
+    </ClCompile>
+    <ClCompile Include="Matrice3.cpp">
       <Filter>Fichiers sources</Filter>
     </ClCompile>
   </ItemGroup>
