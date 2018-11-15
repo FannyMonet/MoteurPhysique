@@ -1,5 +1,6 @@
 #pragma once
-
+#include "Matrice3.h"
+#include "Matrice4.h"
 
 class vecteur3D
 {
@@ -19,5 +20,7 @@ public:
 	vecteur3D Multiplication_Scalaire(float k);
 	vecteur3D addForce(vecteur3D &force);
 	vecteur3D clearAccum();
+	vecteur3D localToWorld(Matrice3);
+	vecteur3D worldToLocal(Matrice3);
 };
 
