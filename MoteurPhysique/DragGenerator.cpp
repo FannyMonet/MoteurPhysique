@@ -1,7 +1,7 @@
 #include "stdafx.h"
 #include "DragGenerator.h"
 
-
+using namespace std;
 
 DragGenerator::DragGenerator()
 {

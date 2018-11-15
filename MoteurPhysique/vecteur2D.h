@@ -1,5 +1,4 @@
 #pragma once
-#include "vecteur.h"
 
 class vecteur2D
 {

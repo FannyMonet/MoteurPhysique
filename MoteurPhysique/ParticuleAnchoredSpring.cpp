@@ -1,6 +1,8 @@
 #include "stdafx.h"
 #include "ParticuleAnchoredSpring.h"
 
+using namespace std;
+
 void ParticuleAnchoredSpring::updateforceparticule(particule particule, float duration)
 {
 	int dim = particule.dimension;

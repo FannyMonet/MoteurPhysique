@@ -1,7 +1,6 @@
 #pragma once
 #include "stdafx.h"
 #include <vector>
-#include "vecteur.h"
 #include "vecteur2D.h"
 #include "vecteur3D.h"
 
