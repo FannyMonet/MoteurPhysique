@@ -12,7 +12,7 @@ public:
 
 	Quaternion();
 	Quaternion(double w, double x, double y, double z);
-
+	Quaternion(Quaternion* q);
 	void normalize();
 	Quaternion operator*=(Quaternion q);
 	void effectuerRotation(vecteur3D v);

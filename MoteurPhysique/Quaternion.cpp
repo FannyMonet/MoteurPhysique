@@ -15,6 +15,14 @@ Quaternion::Quaternion(double _w, double _x, double _y, double _z)
 	z = _z;
 }
 
+Quaternion::Quaternion(Quaternion* q)
+{
+	w = q->w;
+	x = q->x;
+	y = q->y;
+	z = q->z;
+
+}
 Quaternion Quaternion::operator*=(Quaternion q)
 {
 	return Quaternion(	w * q.w - x * q.x - y * q.y - z * q.z,
@@ -66,4 +74,13 @@ Matrice3 Quaternion::convertToMatrice()
 					 2*y*z - 2*x*w,
 					 (1 - (2*x*x + 2*y*y))
 	);
+}
+void Quaternion::updateVelociteAngulaire(vecteur3D velocite, float temps)
+{
+	Quaternion oldVelocity = Quaternion(this);
+	(*this) *= Quaternion(0, velocite.x, velocite.y, velocite.z);
+	w = oldVelocity.w + temps / 2 * w;
+	x = oldVelocity.x + temps / 2 * x;
+	y = oldVelocity.y + temps / 2 * y;
+	z = oldVelocity.z + temps / 2 * z;
 }
