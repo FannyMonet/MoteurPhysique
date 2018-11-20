@@ -14,7 +14,7 @@ public:
 	vecteur2D accumForce2D;
 	vecteur3D accumForce3D;
 	int numero;
-	float dumping;
+	float damping;
 	float masse;
 	int dimension;
 	float rayon;
@@ -22,7 +22,7 @@ public:
 	particule(float posx, float posy, float posz, float vitx, float vity, float vitz, int n, float d, float m, float r)
 	{
 		numero = n;
-		dumping = d;
+		damping = d;
 		masse = m;
 		position3D = vecteur3D(posx, posy, posz);
 		vitesse3D = vecteur3D(vitx, vity, vitz);
@@ -33,7 +33,7 @@ public:
 	particule(float posx, float posy, float vitx, float vity, int n, float d, float m, float r)
 	{
 		numero = n;
-		dumping = d;
+		damping = d;
 		masse = m;
 		position2D = vecteur2D(posx, posy);
 		vitesse2D = vecteur2D(vitx, vity);
@@ -44,7 +44,7 @@ public:
 	particule()
 	{
 		numero = 0;
-		dumping = 0;
+		damping = 0;
 		masse = 0;
 		position3D = vecteur3D(0, 0, 0);
 		vitesse3D = vecteur3D(0, 0, 0);
@@ -56,7 +56,7 @@ public:
 	{
 		dimension = particule.dimension;
 		numero = particule.numero;
-		dumping = particule.dumping;
+		damping = particule.damping;
 		masse = particule.masse;
 		rayon = particule.rayon;
 		if (dimension == 3)
