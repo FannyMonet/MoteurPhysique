@@ -57,10 +57,6 @@ void Quaternion::effectuerRotation(vecteur3D v)
 	y = q.y;
 	z = q.z;
 }
-void Quaternion::updateVelociteAngulaire(vecteur3D velocite, float temps)
-{
-	 
-}
 
 Matrice3 Quaternion::convertToMatrice()
 {
