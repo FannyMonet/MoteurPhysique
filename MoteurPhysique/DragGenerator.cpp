@@ -28,6 +28,14 @@ void DragGenerator::updateforceparticule(particule* particule, float duration)
 	}
 }
 
+void DragGenerator::updateForceRigidBody(vecteur3D velocity, vecteur3D rotation, vecteur3D* forceAccum, vecteur3D* torqueAccum, float duration)
+{
+	forceAccum->x += -K1 * velocity.x - K2 * velocity.x*velocity.x;
+	forceAccum->y += -K1 * velocity.y - K2 * velocity.y*velocity.y;
+	forceAccum->z += -K1 * velocity.z - K2 * velocity.z*velocity.z;
 
-
+	torqueAccum->x += -K1 * rotation.x - K2 * rotation.x*rotation.x;
+	torqueAccum->y += -K1 * rotation.y - K2 * rotation.y*rotation.y;
+	torqueAccum->z += -K1 * rotation.z - K2 * rotation.z*rotation.z;
+}
 

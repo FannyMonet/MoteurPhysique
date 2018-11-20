@@ -1,5 +1,6 @@
 #pragma once
 #include "Particuleforcegenerator.h"
+
 class DragGenerator :
 	public Particuleforcegenerator
 {
@@ -13,5 +14,6 @@ public:
 
 
 	virtual void updateforceparticule(particule* particule, float duration);
+	virtual void updateForceRigidBody(vecteur3D velocity, vecteur3D rotation, vecteur3D* forceAccum, vecteur3D* torqueAccum, float duration);
 };
 

@@ -6,7 +6,7 @@ RigidBody::RigidBody(vecteur3D _position, vecteur3D _velocity, vecteur3D _orient
 {
 	position = _position;
 	velocity = _velocity;
-	//dragGenerator = DragGenerator();//vk1 et vk2
+	dragGenerator = DragGenerator();//vk1 et vk2
 	transformMatrice = Matrice3(position.x, 0, 0,
 								0, position.y, 0,
 								0, 0, position.z);
@@ -43,7 +43,7 @@ void RigidBody::Integrer(float duree)
 	rotation = vecteur3D(	rotation.x * pow(angularDamping, duree) + accelerationAngulaire.x * duree,
 							rotation.y * pow(angularDamping, duree) + accelerationAngulaire.y * duree,
 							rotation.z * pow(angularDamping, duree) + accelerationAngulaire.z * duree);
-	//dragGenerator.updateForceRigidBody(this, duree);
+	dragGenerator.updateForceRigidBody(velocity, rotation, &forceAccum, &torqueAccum, duree);
 	updatePosition(duree);
 	updateOrientation(duree);
 	

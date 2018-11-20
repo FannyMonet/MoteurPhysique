@@ -18,7 +18,7 @@ public:
 	Matrice3 inverseInertieTensor;
 	vecteur3D forceAccum;
 	vecteur3D torqueAccum;
-	//DragGenerator dragGenerator;
+	DragGenerator dragGenerator;
 
 	RigidBody(vecteur3D position, vecteur3D velocity, vecteur3D orientation);
 
