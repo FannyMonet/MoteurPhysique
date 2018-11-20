@@ -1,6 +1,7 @@
 #include "stdafx.h"
 #include "ParticuleCable.h"
 
+using namespace std;
 
 ParticuleCable::ParticuleCable()
 {

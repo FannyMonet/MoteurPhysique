@@ -1,13 +1,14 @@
 #include "stdafx.h"
 #include "ParticuleContactResolver.h"
 
+using namespace std;
 
 ParticuleContactResolver::ParticuleContactResolver()
 {
 }
+
 //Fonction parcourant toutes les collisions listées dans listCollisions et les résolvant, jusqu'à 
 // un maximum d'itéractions 
-
 vector<particule> ParticuleContactResolver::resolveContacts(vector<particule>listParticules)
 {
 	

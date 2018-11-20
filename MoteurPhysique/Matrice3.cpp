@@ -1,6 +1,8 @@
 #include "stdafx.h"
 #include "Matrice3.h"
 
+using namespace std;
+
 Matrice3::Matrice3(double a0, double a1, double a2, double a3, double a4, double a5, double a6, double a7, double a8)
 {
 	coef[0] = a0;
@@ -42,11 +44,6 @@ Matrice3 Matrice3::inverse()
 Matrice3 Matrice3::transpose()
 {
 	return Matrice3(coef[0], coef[3], coef[6], coef[1], coef[4], coef[7], coef[2], coef[5], coef[8]);
-}
-
-vecteur3D Matrice3::Multiplication(vecteur3D vec)
-{
-	return vecteur3D(coef[0] * vec.x + coef[1] * vec.y + coef[2] * vec.z, coef[3] * vec.x + coef[4] * vec.y + coef[5] * vec.z, coef[6] * vec.x + coef[7] * vec.y + coef[8] * vec.z);
 }
 
 Matrice3 Matrice3::Multiplication(Matrice3 mat)

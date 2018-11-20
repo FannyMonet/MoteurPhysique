@@ -39,14 +39,29 @@ double vecteur3D::Norme()
 
 vecteur3D vecteur3D::Multiplication_Scalaire(float k)
 {
-	return vecteur3D(x * k, y * k, z * k);;
+	return vecteur3D(x * k, y * k, z * k);
 }
 
 vecteur3D vecteur3D::addForce(vecteur3D &force)
 {
-	return vecteur3D(x + force.x, y * force.y, z * force.z);;
+	return vecteur3D(x + force.x, y * force.y, z * force.z);
 }
 vecteur3D vecteur3D::clearAccum()
 {
-	return vecteur3D(0, -9.81, 0);;;
+	return vecteur3D(0, -9.81, 0);
+}
+
+vecteur3D vecteur3D::localToWorld(Matrice3 transfMatrice)
+{
+	return vecteur3D(	transfMatrice.coef[0] * x + transfMatrice.coef[1] * y + transfMatrice.coef[2] * z, 
+						transfMatrice.coef[3] * x + transfMatrice.coef[4] * y + transfMatrice.coef[5] * z, 
+						transfMatrice.coef[6] * x + transfMatrice.coef[7] * y + transfMatrice.coef[8] * z
+	);
+}
+vecteur3D vecteur3D::worldToLocal(Matrice3 inverseTransfMatrice)
+{
+	return vecteur3D(	inverseTransfMatrice.coef[0] * x + inverseTransfMatrice.coef[1] * y + inverseTransfMatrice.coef[2] * z,
+						inverseTransfMatrice.coef[3] * x + inverseTransfMatrice.coef[4] * y + inverseTransfMatrice.coef[5] * z,
+						inverseTransfMatrice.coef[6] * x + inverseTransfMatrice.coef[7] * y + inverseTransfMatrice.coef[8] * z
+	);
 }

@@ -1,6 +1,7 @@
 #include "stdafx.h"
 #include "ParticuleContact.h"
 
+using namespace std;
 
 ParticuleContact::ParticuleContact()
 {

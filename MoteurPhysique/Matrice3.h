@@ -1,5 +1,4 @@
 #pragma once
-#include "vecteur3D.h"
 
 class Matrice3
 {
@@ -11,6 +10,5 @@ public:
 
 	Matrice3 inverse();
 	Matrice3 transpose();
-	vecteur3D Multiplication(vecteur3D vec);
 	Matrice3 Multiplication(Matrice3 mat);
 };

@@ -1,7 +1,6 @@
 #pragma once
 #include "Particuleforcegenerator.h"
-#include "vecteur.h"
-using namespace std;
+
 class ParticuleAnchoredSpring :
 	public Particuleforcegenerator
 {

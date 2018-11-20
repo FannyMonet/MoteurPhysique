@@ -1,6 +1,8 @@
 #include "stdafx.h"
 #include "ParticuleBungee.h"
 
+using namespace std;
+
 void ParticuleBungee::updateforceparticule(particule particule, float duration)
 {
 	if (sqrt(autreparticule.position3D.x*autreparticule.position3D.x + autreparticule.position3D.y*autreparticule.position3D.y + autreparticule.position3D.z*autreparticule.position3D.z) >= L0)

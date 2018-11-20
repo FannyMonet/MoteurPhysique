@@ -3,6 +3,7 @@
 #include <vector>
 #include "particule.h"
 
+using namespace std;
 
 int particule::Inverse_Masse(int Masse)
 {

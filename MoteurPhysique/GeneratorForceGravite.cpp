@@ -1,6 +1,7 @@
 #include "stdafx.h"
 #include "GeneratorForceGravite.h"
 
+using namespace std;
 
 GeneratorForceGravite::GeneratorForceGravite()
 {

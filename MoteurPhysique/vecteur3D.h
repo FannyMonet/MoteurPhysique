@@ -1,5 +1,6 @@
 #pragma once
-#include "vecteur.h"
+#include "Matrice3.h"
+#include "Matrice4.h"
 
 class vecteur3D
 {
@@ -12,12 +13,14 @@ public:
 	vecteur3D();
 	vecteur3D(float dx, float dy, float dz);
 
-	virtual vecteur3D Addition(vecteur3D &vec);
-	virtual float Produit_Scalaire(vecteur3D &vec);
-	virtual vecteur3D Produit_de_Composante(vecteur3D &vec);
-	virtual double Norme();
-	virtual vecteur3D Multiplication_Scalaire(float k);
-	virtual vecteur3D addForce(vecteur3D &force);
-	virtual vecteur3D clearAccum();
+	vecteur3D Addition(vecteur3D &vec);
+	float Produit_Scalaire(vecteur3D &vec);
+	vecteur3D Produit_de_Composante(vecteur3D &vec);
+	double Norme();
+	vecteur3D Multiplication_Scalaire(float k);
+	vecteur3D addForce(vecteur3D &force);
+	vecteur3D clearAccum();
+	vecteur3D localToWorld(Matrice3);
+	vecteur3D worldToLocal(Matrice3);
 };
 

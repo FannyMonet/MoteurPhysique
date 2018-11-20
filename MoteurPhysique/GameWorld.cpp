@@ -1,6 +1,7 @@
 #include "stdafx.h"
 #include "GameWorld.h"
 
+using namespace std;
 
 GameWorld::GameWorld()
 {

@@ -1,7 +1,5 @@
 #include "stdafx.h"
 #include "ParticuleSpring.h"
-#include "vector"
-#include "Vecteur3D.h"
 
 using namespace std;
 
