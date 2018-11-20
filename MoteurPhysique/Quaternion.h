@@ -17,6 +17,7 @@ public:
 	Quaternion operator*=(Quaternion q);
 	void effectuerRotation(vecteur3D v);
 	void updateVelociteAngulaire(vecteur3D velocite, float temps);
-	Matrice3 convertToMatrice();
+	Matrice3 convertToMatrice3();
+	Matrice4 convertToMatrice4();
 };
 
