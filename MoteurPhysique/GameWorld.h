@@ -4,6 +4,7 @@
 #include "ParticuleContactResolver.h"
 #include "GeneratorForceGravite.h"
 #include "DragGenerator.h"
+#include "RectangleBody.h"
 
 class GameWorld
 {
@@ -13,6 +14,7 @@ public:
 	ParticuleContactResolver resolver;
 	GeneratorForceGravite graviteGenerator;
 	DragGenerator dragGenerator;
+	RigidBody rectangle;
 
 	GameWorld();
 
