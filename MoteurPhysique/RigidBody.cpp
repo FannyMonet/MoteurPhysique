@@ -60,7 +60,7 @@ void RigidBody::Integrer(float duree)
 	updatePosition(duree);
 	updateOrientation(duree);
 	
-	//Calculer les "derived data" // Transform matrix et I-1
+	calculDonneesDerivees();
 	clearAccumulators();
 }
 void RigidBody::updatePosition(float duree)
