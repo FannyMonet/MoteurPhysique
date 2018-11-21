@@ -23,6 +23,7 @@ RigidBody::RigidBody(vecteur3D _position, vecteur3D _velocity, vecteur3D _orient
 Matrice3 RigidBody::calculDonneesDerivees()
 {
 	// Calcul transformMatrice
+	inverseInertieTensor = transformMatrice.Multiplication(inverseInertieTensor.Multiplication(transformMatrice.inverse()));
 	return Matrice3();
 }
 void RigidBody::addForceAtPoint(vecteur3D force, vecteur3D point)
