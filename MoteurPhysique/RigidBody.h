@@ -31,5 +31,8 @@ public:
 	void updateOrientation(float duree);
 	virtual Matrice3 getInertieTensor();
 	float getMass() { return 1 / inverseMass; }
+	
 };
+Quaternion toQuaternion(vecteur3D orientation);
+vecteur3D toEulerAngle(const Quaternion& q);
 

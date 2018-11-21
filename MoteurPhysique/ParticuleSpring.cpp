@@ -11,8 +11,6 @@ void ParticuleSpring::updateforceparticule(particule  particule, float duration)
 	double deltaz;
 	if(dim == 3)
 		 deltaz = particule.position3D.z - autreparticule.position3D.z;
-
-	vector<int> force;
 	
 	if (dim == 2)
 	{
