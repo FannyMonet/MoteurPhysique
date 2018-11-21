@@ -8,6 +8,7 @@ public:
 	vecteur3D dimensions;
 	vecteur3D position;
 
-	RectangleBody(vecteur3D _position, vecteur3D _velocity, vecteur3D _orientation, vecteur3D dim, vecteur3D pos);
+	RectangleBody(vecteur3D position, vecteur3D velocity, vecteur3D orientation, vecteur3D rotation, vecteur3D dim, vecteur3D pos);
+	virtual Matrice3 getInertieTensor();
 };
 

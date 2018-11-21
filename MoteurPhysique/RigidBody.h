@@ -20,7 +20,7 @@ public:
 	vecteur3D torqueAccum;
 	DragGenerator dragGenerator;
 
-	RigidBody(vecteur3D position, vecteur3D velocity, vecteur3D orientation);
+	RigidBody(vecteur3D position, vecteur3D velocity, vecteur3D orientation, vecteur3D rotation);
 
 	Matrice3 calculDonneesDerivees();
 	void addForceAtPoint(vecteur3D force, vecteur3D point);
@@ -29,6 +29,7 @@ public:
 	void clearAccumulators();
 	void updatePosition(float duree);
 	void updateOrientation(float duree);
+	virtual Matrice3 getInertieTensor();
 	float getMass() { return 1 / inverseMass; }
 };
 

@@ -3,15 +3,19 @@
 
 # define M_PI           3.14159265358979323846  /* pi */
 
-RigidBody::RigidBody(vecteur3D _position, vecteur3D _velocity, vecteur3D _orientation)
+RigidBody::RigidBody(vecteur3D _position, vecteur3D _velocity, vecteur3D _orientation, vecteur3D _rotation)
 {
-	position = _position;
-	velocity = _velocity;
-	dragGenerator = DragGenerator();//vk1 et vk2
+	position = vecteur3D(_position);
+	velocity = vecteur3D(_velocity);
+	rotation = vecteur3D(_rotation);
 	transformMatrice = Matrice3(position.x, 0, 0,
 								0, position.y, 0,
 								0, 0, position.z);
 	orientation = toQuaternion(_orientation);
+	forceAccum = vecteur3D();
+	torqueAccum = vecteur3D();
+	dragGenerator = DragGenerator();//vk1 et vk2
+	inverseInertieTensor = getInertieTensor().inverse();
 }
 
 Matrice3 RigidBody::calculDonneesDerivees()
@@ -112,4 +116,8 @@ static Quaternion toQuaternion(vecteur3D orientation)
 	q.y = cy * cr * sp + sy * sr * cp;
 	q.z = sy * cr * cp - cy * sr * sp;
 	return q;
+}
+Matrice3 RigidBody::getInertieTensor()
+{
+	return Matrice3();
 }
