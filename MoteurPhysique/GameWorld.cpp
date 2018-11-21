@@ -18,12 +18,13 @@ GameWorld::GameWorld()
 void GameWorld::update(float rate)
 {
 	listParticules = resolver.resolveContacts(listParticules);
+
 	integrer(rate);
 }
 
 void GameWorld::integrer(float rate)
 {
-
+	rectangle.Integrer(rate);
 	dragGenerator.updateforceparticule(&listParticules[0], rate);
 	for (int i = 0; i < listParticules.size(); i++)
 	{
