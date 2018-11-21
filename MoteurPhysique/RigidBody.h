@@ -20,7 +20,7 @@ public:
 	vecteur3D torqueAccum;
 	DragGenerator dragGenerator;
 
-	RigidBody(vecteur3D position, vecteur3D velocity, vecteur3D orientation, vecteur3D rotation);
+	RigidBody(vecteur3D position, vecteur3D velocity, vecteur3D orientation, vecteur3D rotation, float linearDamping, float angularDamping);
 
 	Matrice3 calculDonneesDerivees();
 	void addForceAtPoint(vecteur3D force, vecteur3D point);

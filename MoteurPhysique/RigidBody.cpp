@@ -3,7 +3,7 @@
 
 # define M_PI           3.14159265358979323846  /* pi */
 
-RigidBody::RigidBody(vecteur3D _position, vecteur3D _velocity, vecteur3D _orientation, vecteur3D _rotation)
+RigidBody::RigidBody(vecteur3D _position, vecteur3D _velocity, vecteur3D _orientation, vecteur3D _rotation, float _linearDamping = 0.7, float _angularDamping = 0.7)
 {
 	position = vecteur3D(_position);
 	velocity = vecteur3D(_velocity);
@@ -16,6 +16,8 @@ RigidBody::RigidBody(vecteur3D _position, vecteur3D _velocity, vecteur3D _orient
 	torqueAccum = vecteur3D();
 	dragGenerator = DragGenerator();//vk1 et vk2
 	inverseInertieTensor = getInertieTensor().inverse();
+	linearDamping = _linearDamping;
+	angularDamping = _angularDamping;
 }
 
 Matrice3 RigidBody::calculDonneesDerivees()
