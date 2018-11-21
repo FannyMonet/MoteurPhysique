@@ -2,7 +2,7 @@
 #include "vecteur3D.h"
 #include "RigidBody.h"
 
-class RectangleBody : RigidBody
+class RectangleBody : public RigidBody
 {
 public:
 	vecteur3D dimensions;

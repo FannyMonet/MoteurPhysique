@@ -5,6 +5,7 @@
 #include "GeneratorForceGravite.h"
 #include "DragGenerator.h"
 #include "RectangleBody.h"
+#include "RigidBody.h"
 
 class GameWorld
 {
