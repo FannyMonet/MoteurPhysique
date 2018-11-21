@@ -1,8 +1,8 @@
 #include "stdafx.h"
 #include "RectangleBody.h"
 
-
-RectangleBody::RectangleBody(vecteur3D _position, vecteur3D _velocity, vecteur3D _orientation, vecteur3D _rotation, float _linearDamping, float _angularDamping, vecteur3D dim) : RigidBody(_position, _velocity, _orientation, _rotation, _linearDamping, _angularDamping)
+RectangleBody::RectangleBody(){}
+RectangleBody::RectangleBody(vecteur3D _position, vecteur3D _velocity, vecteur3D _orientation, vecteur3D _rotation, float _linearDamping, float _angularDamping, vecteur3D dim)
 {
 	dimensions = dim;
 }

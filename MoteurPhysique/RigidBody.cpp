@@ -3,15 +3,18 @@
 
 # define M_PI           3.14159265358979323846  /* pi */
 
+RigidBody::RigidBody(){}
+
 RigidBody::RigidBody(vecteur3D _position, vecteur3D _velocity, vecteur3D _orientation, vecteur3D _rotation, float _linearDamping = 0.7, float _angularDamping = 0.7)
 {
 	position = vecteur3D(_position);
 	velocity = vecteur3D(_velocity);
 	rotation = vecteur3D(_rotation);
-	transformMatrice = Matrice3(position.x, 0, 0,
-								0, position.y, 0,
-								0, 0, position.z);
 	orientation = toQuaternion(_orientation);
+	transformMatrice = orientation.convertToMatrice3();
+	/*transformMatrice = Matrice3(position.x, 0, 0,
+								0, position.y, 0,
+								0, 0, position.z);*/
 	forceAccum = vecteur3D();
 	torqueAccum = vecteur3D();
 	dragGenerator = DragGenerator();//vk1 et vk2
@@ -23,6 +26,7 @@ RigidBody::RigidBody(vecteur3D _position, vecteur3D _velocity, vecteur3D _orient
 Matrice3 RigidBody::calculDonneesDerivees()
 {
 	// Calcul transformMatrice
+	transformMatrice = orientation.convertToMatrice3();
 	inverseInertieTensor = transformMatrice.Multiplication(inverseInertieTensor.Multiplication(transformMatrice.inverse()));
 	return Matrice3();
 }
