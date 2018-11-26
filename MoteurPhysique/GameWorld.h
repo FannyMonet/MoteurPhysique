@@ -11,12 +11,12 @@ class GameWorld
 {
 public:
 	vector<particule> listParticules;
+	vector<RigidBody> listRectangles;
 	RegistreForce registre;
 	ParticuleContactResolver resolver;
 	GeneratorForceGravite graviteGenerator;
 	DragGenerator dragGenerator;
 	RigidBody rectangle;
-
 	GameWorld();
 
 	void update(float rate);
