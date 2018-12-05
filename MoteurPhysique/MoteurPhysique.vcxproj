@@ -159,6 +159,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="CollisionData.h" />
     <ClInclude Include="Contact.h" />
     <ClInclude Include="DragGenerator.h" />
     <ClInclude Include="GameWorld.h" />
@@ -197,6 +198,7 @@
     <ClInclude Include="vecteur4D.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="CollisionData.cpp" />
     <ClCompile Include="Contact.cpp" />
     <ClCompile Include="DragGenerator.cpp" />
     <ClCompile Include="GameWorld.cpp" />
