@@ -122,6 +122,7 @@ Quaternion RigidBody::toQuaternion(vecteur3D orientation)
 	q.z = sy * cr * cp - cy * sr * sp;
 	return q;
 }
+
 Matrice3 RigidBody::getInertieTensor()
 {
 	

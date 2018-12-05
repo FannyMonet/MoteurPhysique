@@ -114,10 +114,7 @@
     <ClInclude Include="RectangleBody.h">
       <Filter>Fichiers d%27en-tête</Filter>
     </ClInclude>
-    <ClInclude Include="Primitive.h">
-      <Filter>Fichiers d%27en-tête</Filter>
-    </ClInclude>
-    <ClInclude Include="Plane.h">
+    <ClInclude Include="Contact.h">
       <Filter>Fichiers d%27en-tête</Filter>
     </ClInclude>
   </ItemGroup>
@@ -203,10 +200,7 @@
     <ClCompile Include="RectangleBody.cpp">
       <Filter>Fichiers sources</Filter>
     </ClCompile>
-    <ClCompile Include="Primitive.cpp">
-      <Filter>Fichiers sources</Filter>
-    </ClCompile>
-    <ClCompile Include="Plane.cpp">
+    <ClCompile Include="Contact.cpp">
       <Filter>Fichiers sources</Filter>
     </ClCompile>
   </ItemGroup>
