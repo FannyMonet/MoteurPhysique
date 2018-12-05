@@ -159,6 +159,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="Contact.h" />
     <ClInclude Include="DragGenerator.h" />
     <ClInclude Include="GameWorld.h" />
     <ClInclude Include="GeneratorForceGravite.h" />
@@ -194,6 +195,7 @@
     <ClInclude Include="vecteur4D.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="Contact.cpp" />
     <ClCompile Include="DragGenerator.cpp" />
     <ClCompile Include="GameWorld.cpp" />
     <ClCompile Include="GeneratorForceGravite.cpp" />
