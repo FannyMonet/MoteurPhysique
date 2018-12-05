@@ -20,13 +20,14 @@ RigidBody::RigidBody(vecteur3D _position, vecteur3D _velocity, vecteur3D _orient
 	inverseInertieTensor = getInertieTensor().inverse();
 	linearDamping = _linearDamping;
 	angularDamping = _angularDamping;
+	inverseMass = 1;
+	points = new vecteur3D[8];
 }
 
-Matrice3 RigidBody::calculDonneesDerivees()
+void RigidBody::calculDonneesDerivees()
 {
 	transformMatrice = orientation.convertToMatrice3();
 	inverseInertieTensor = transformMatrice.Multiplication(inverseInertieTensor.Multiplication(transformMatrice.inverse()));
-	return Matrice3();
 }
 void RigidBody::addForceAtPoint(vecteur3D force, vecteur3D point)
 {
@@ -59,19 +60,20 @@ void RigidBody::Integrer(float duree)
 	updateOrientation(duree);
 	
 	calculDonneesDerivees();
+	transformPoints();
 	clearAccumulators();
 }
 void RigidBody::updatePosition(float duree)
 {
 	position.x = position.x + (float)velocity.x * duree;
 	position.y = position.y + (float)velocity.y * duree;
-	position.z = position.z + (float)velocity.y * duree;
+	position.z = position.z + (float)velocity.z * duree;
 }
 void RigidBody::updateOrientation(float duree)
 {
 	orientation.x = orientation.x + rotation.x * duree;
 	orientation.y = orientation.y + rotation.y * duree;
-	orientation.z = orientation.z + rotation.y * duree;
+	orientation.z = orientation.z + rotation.z * duree;
 }
 void RigidBody::clearAccumulators()
 {
@@ -121,10 +123,4 @@ Quaternion RigidBody::toQuaternion(vecteur3D orientation)
 	q.y = cy * cr * sp + sy * sr * cp;
 	q.z = sy * cr * cp - cy * sr * sp;
 	return q;
-}
-
-Matrice3 RigidBody::getInertieTensor()
-{
-	
-	return Matrice3();
 }

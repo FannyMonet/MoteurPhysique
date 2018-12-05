@@ -20,20 +20,22 @@ public:
 	vecteur3D forceAccum;
 	vecteur3D torqueAccum;
 	DragGenerator dragGenerator;
+	vecteur3D* points;
 
 	RigidBody();
 	RigidBody(vecteur3D position, vecteur3D velocity, vecteur3D orientation, vecteur3D rotation, float linearDamping, float angularDamping);
 
-	virtual Matrice3 calculDonneesDerivees();
+	virtual void calculDonneesDerivees();
 	virtual void addForceAtPoint(vecteur3D force, vecteur3D point);
 	virtual void addForceAtBodyPoint(vecteur3D force, vecteur3D point);
 	virtual void Integrer(float duree);
 	virtual void clearAccumulators();
 	virtual void updatePosition(float duree);
 	virtual void updateOrientation(float duree);
-	virtual Matrice3 getInertieTensor();
 	virtual float getMass() { return 1 / inverseMass; }
+	virtual void transformPoints() {};
+	virtual Matrice3 getInertieTensor() { return Matrice3(); };
 	Quaternion toQuaternion(vecteur3D orientation);
-	vecteur3D toEulerAngle(const Quaternion& q);	
+	vecteur3D toEulerAngle(const Quaternion& q);
 };
 
