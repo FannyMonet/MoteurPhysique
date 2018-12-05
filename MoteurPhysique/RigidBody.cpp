@@ -125,5 +125,6 @@ Quaternion RigidBody::toQuaternion(vecteur3D orientation)
 
 Matrice3 RigidBody::getInertieTensor()
 {
+	
 	return Matrice3();
 }

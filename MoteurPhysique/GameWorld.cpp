@@ -12,7 +12,7 @@ GameWorld::GameWorld()
 	graviteGenerator = GeneratorForceGravite();
 	dragGenerator = DragGenerator(0.2, 0.3);
 	rectangle = RectangleBody(vecteur3D(100, 5, 10), vecteur3D(1, 10, 0), vecteur3D(0, 1, 0), vecteur3D(0, 0, 0), 0.1, 0.1, vecteur3D(0, 0, 0));
-	listRectangles.emplace_back( RectangleBody(vecteur3D(0,0,0), vecteur3D(0, 0, 0), vecteur3D(0, 1, 0), vecteur3D(0, 0, 0), 0.1, 0.1, vecteur3D(0, 0, 0) ));
+	listRectangles.emplace_back( RectangleBody(vecteur3D(0,0,0), vecteur3D(0, 15, 0), vecteur3D(0, 1, 0), vecteur3D(0, 0, 0), 0.1, 0.1, vecteur3D(0, 0, 0) ));
 }
 
 void GameWorld::update(float rate)
