@@ -12,7 +12,7 @@ public:
 
 	vecteur3D();
 	vecteur3D(float dx, float dy, float dz);
-
+	vecteur3D(const vecteur3D &vec);
 	vecteur3D Addition(vecteur3D &vec);
 	float Produit_Scalaire(vecteur3D &vec);
 	vecteur3D Produit_de_Composante(vecteur3D &vec);

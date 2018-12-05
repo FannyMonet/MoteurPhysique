@@ -3,6 +3,7 @@
 #include "Quaternion.h"
 #include "math.h"
 #include "DragGenerator.h"
+#include <iostream>
 
 class RigidBody
 {
@@ -23,17 +24,16 @@ public:
 	RigidBody();
 	RigidBody(vecteur3D position, vecteur3D velocity, vecteur3D orientation, vecteur3D rotation, float linearDamping, float angularDamping);
 
-	Matrice3 calculDonneesDerivees();
-	void addForceAtPoint(vecteur3D force, vecteur3D point);
-	void addForceAtBodyPoint(vecteur3D force, vecteur3D point);
-	void Integrer(float duree);
-	void clearAccumulators();
-	void updatePosition(float duree);
-	void updateOrientation(float duree);
+	virtual Matrice3 calculDonneesDerivees();
+	virtual void addForceAtPoint(vecteur3D force, vecteur3D point);
+	virtual void addForceAtBodyPoint(vecteur3D force, vecteur3D point);
+	virtual void Integrer(float duree);
+	virtual void clearAccumulators();
+	virtual void updatePosition(float duree);
+	virtual void updateOrientation(float duree);
 	virtual Matrice3 getInertieTensor();
-	float getMass() { return 1 / inverseMass; }
-	
+	virtual float getMass() { return 1 / inverseMass; }
+	Quaternion toQuaternion(vecteur3D orientation);
+	vecteur3D toEulerAngle(const Quaternion& q);	
 };
-Quaternion toQuaternion(vecteur3D orientation);
-vecteur3D toEulerAngle(const Quaternion& q);
 

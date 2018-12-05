@@ -16,6 +16,12 @@ vecteur3D::vecteur3D(float dx, float dy, float dz)
 	y = dy;
 	z = dz;
 }
+vecteur3D::vecteur3D(const vecteur3D &vec)
+{
+	x = vec.x;
+	y = vec.y;
+	z = vec.z;
+}
 
 vecteur3D vecteur3D::Addition(vecteur3D &vec)
 {

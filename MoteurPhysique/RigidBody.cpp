@@ -1,23 +1,22 @@
 #include "stdafx.h"
 #include "RigidBody.h"
+using namespace std;
 
 # define M_PI           3.14159265358979323846  /* pi */
+
 
 RigidBody::RigidBody(){}
 
 RigidBody::RigidBody(vecteur3D _position, vecteur3D _velocity, vecteur3D _orientation, vecteur3D _rotation, float _linearDamping = 0.7, float _angularDamping = 0.7)
 {
-	position = vecteur3D(_position);
-	velocity = vecteur3D(_velocity);
-	rotation = vecteur3D(_rotation);
+	position = _position;
+	velocity = _velocity;
+	rotation = _rotation;
 	orientation = toQuaternion(_orientation);
 	transformMatrice = orientation.convertToMatrice3();
-	/*transformMatrice = Matrice3(position.x, 0, 0,
-								0, position.y, 0,
-								0, 0, position.z);*/
 	forceAccum = vecteur3D();
 	torqueAccum = vecteur3D();
-	dragGenerator = DragGenerator();//vk1 et vk2
+	dragGenerator = DragGenerator();
 	inverseInertieTensor = getInertieTensor().inverse();
 	linearDamping = _linearDamping;
 	angularDamping = _angularDamping;
@@ -25,7 +24,6 @@ RigidBody::RigidBody(vecteur3D _position, vecteur3D _velocity, vecteur3D _orient
 
 Matrice3 RigidBody::calculDonneesDerivees()
 {
-	// Calcul transformMatrice
 	transformMatrice = orientation.convertToMatrice3();
 	inverseInertieTensor = transformMatrice.Multiplication(inverseInertieTensor.Multiplication(transformMatrice.inverse()));
 	return Matrice3();
@@ -60,14 +58,14 @@ void RigidBody::Integrer(float duree)
 	updatePosition(duree);
 	updateOrientation(duree);
 	
-	//Calculer les "derived data" // Transform matrix et I-1
+	calculDonneesDerivees();
 	clearAccumulators();
 }
 void RigidBody::updatePosition(float duree)
 {
-	position.x = position.x + velocity.x * duree;
-	position.y = position.y + velocity.y * duree;
-	position.z = position.z + velocity.y * duree;
+	position.x = position.x + (float)velocity.x * duree;
+	position.y = position.y + (float)velocity.y * duree;
+	position.z = position.z + (float)velocity.y * duree;
 }
 void RigidBody::updateOrientation(float duree)
 {
@@ -81,7 +79,7 @@ void RigidBody::clearAccumulators()
 	torqueAccum = vecteur3D(0, 0, 0);
 }
 //source: wikipedia https://en.wikipedia.org/wiki/Conversion_between_quaternions_and_Euler_angles
-static vecteur3D toEulerAngle(const Quaternion& q) 
+vecteur3D RigidBody::toEulerAngle(const Quaternion& q) 
 {
 	double roll;
 	double pitch;
@@ -104,7 +102,7 @@ static vecteur3D toEulerAngle(const Quaternion& q)
 	yaw = atan2(siny_cosp, cosy_cosp);
 	return vecteur3D(roll, pitch, yaw);
 }
-static Quaternion toQuaternion(vecteur3D orientation)
+Quaternion RigidBody::toQuaternion(vecteur3D orientation)
 {
 	double roll = orientation.x;
 	double pitch = orientation.y;
