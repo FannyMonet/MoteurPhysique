@@ -13,7 +13,7 @@ RigidBody::RigidBody(vecteur3D _position, vecteur3D _velocity, vecteur3D _orient
 	velocity = _velocity;
 	rotation = _rotation;
 	orientation = toQuaternion(_orientation);
-	transformMatrice = orientation.convertToMatrice3();
+	transformMatrice = orientation.convertToMatrice4();
 	forceAccum = vecteur3D();
 	torqueAccum = vecteur3D();
 	dragGenerator = DragGenerator();
@@ -26,8 +26,11 @@ RigidBody::RigidBody(vecteur3D _position, vecteur3D _velocity, vecteur3D _orient
 
 void RigidBody::calculDonneesDerivees()
 {
-	transformMatrice = orientation.convertToMatrice3();
-	inverseInertieTensor = transformMatrice.Multiplication(inverseInertieTensor.Multiplication(transformMatrice.inverse()));
+	transformMatrice = orientation.convertToMatrice4();
+	Matrice3 transformMatrice3 = Matrice3(	transformMatrice.coef[0], transformMatrice.coef[1], transformMatrice.coef[2],
+											transformMatrice.coef[4], transformMatrice.coef[5], transformMatrice.coef[6],
+											transformMatrice.coef[8], transformMatrice.coef[9], transformMatrice.coef[10]);
+	inverseInertieTensor = transformMatrice3.Multiplication(inverseInertieTensor.Multiplication(transformMatrice3.inverse()));
 }
 void RigidBody::addForceAtPoint(vecteur3D force, vecteur3D point)
 {
@@ -47,7 +50,7 @@ void RigidBody::Integrer(float duree)
 	vecteur3D accelerationLineaire = vecteur3D(	inverseMass * forceAccum.x, 
 												inverseMass * forceAccum.y, 
 												inverseMass * forceAccum.z);
-	vecteur3D accelerationAngulaire = torqueAccum.localToWorld(inverseInertieTensor);
+	vecteur3D accelerationAngulaire = torqueAccum.produitMatriciel(inverseInertieTensor);
 	velocity = vecteur3D(	velocity.x * pow(linearDamping, duree) + accelerationLineaire.x * duree, 
 							velocity.y * pow(linearDamping, duree) + accelerationLineaire.y * duree,
 							velocity.z * pow(linearDamping, duree) + accelerationLineaire.z * duree
@@ -71,9 +74,7 @@ void RigidBody::updatePosition(float duree)
 }
 void RigidBody::updateOrientation(float duree)
 {
-	orientation.x = orientation.x + rotation.x * duree;
-	orientation.y = orientation.y + rotation.y * duree;
-	orientation.z = orientation.z + rotation.z * duree;
+	orientation.updateVelociteAngulaire(torqueAccum, duree);
 }
 void RigidBody::clearAccumulators()
 {

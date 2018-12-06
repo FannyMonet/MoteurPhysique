@@ -15,7 +15,7 @@ public:
 	vecteur3D velocity;
 	Quaternion orientation;
 	vecteur3D rotation;
-	Matrice3 transformMatrice;
+	Matrice4 transformMatrice;
 	Matrice3 inverseInertieTensor;
 	vecteur3D forceAccum;
 	vecteur3D torqueAccum;

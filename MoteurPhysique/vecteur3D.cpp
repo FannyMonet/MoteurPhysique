@@ -57,17 +57,24 @@ vecteur3D vecteur3D::clearAccum()
 	return vecteur3D(0, -9.81, 0);
 }
 
-vecteur3D vecteur3D::localToWorld(Matrice3 transfMatrice)
+vecteur3D vecteur3D::localToWorld(Matrice4 transfMatrice)
 {
-	return vecteur3D(	transfMatrice.coef[0] * x + transfMatrice.coef[1] * y + transfMatrice.coef[2] * z, 
-						transfMatrice.coef[3] * x + transfMatrice.coef[4] * y + transfMatrice.coef[5] * z, 
-						transfMatrice.coef[6] * x + transfMatrice.coef[7] * y + transfMatrice.coef[8] * z
+	return vecteur3D(	transfMatrice.coef[0] * x + transfMatrice.coef[1] * y + transfMatrice.coef[2] * z + transfMatrice.coef[3],
+						transfMatrice.coef[4] * x + transfMatrice.coef[5] * y + transfMatrice.coef[6] * z + transfMatrice.coef[7],
+						transfMatrice.coef[8] * x + transfMatrice.coef[9] * y + transfMatrice.coef[10] * z + transfMatrice.coef[11]
 	);
 }
-vecteur3D vecteur3D::worldToLocal(Matrice3 inverseTransfMatrice)
+vecteur3D vecteur3D::worldToLocal(Matrice4 inverseTransfMatrice)
 {
-	return vecteur3D(	inverseTransfMatrice.coef[0] * x + inverseTransfMatrice.coef[1] * y + inverseTransfMatrice.coef[2] * z,
-						inverseTransfMatrice.coef[3] * x + inverseTransfMatrice.coef[4] * y + inverseTransfMatrice.coef[5] * z,
-						inverseTransfMatrice.coef[6] * x + inverseTransfMatrice.coef[7] * y + inverseTransfMatrice.coef[8] * z
+	return vecteur3D(	inverseTransfMatrice.coef[0] * x + inverseTransfMatrice.coef[1] * y + inverseTransfMatrice.coef[2] * z + inverseTransfMatrice.coef[3],
+						inverseTransfMatrice.coef[4] * x + inverseTransfMatrice.coef[5] * y + inverseTransfMatrice.coef[6] * z + inverseTransfMatrice.coef[7],
+						inverseTransfMatrice.coef[8] * x + inverseTransfMatrice.coef[9] * y + inverseTransfMatrice.coef[10] * z + inverseTransfMatrice.coef[11]
+	);
+}
+vecteur3D vecteur3D::produitMatriciel(Matrice3 matrice)
+{
+	return vecteur3D(	matrice.coef[0] * x + matrice.coef[1] * y + matrice.coef[2] * z,
+						matrice.coef[3] * x + matrice.coef[4] * y + matrice.coef[5] * z,
+						matrice.coef[6] * x + matrice.coef[7] * y + matrice.coef[8] * z
 	);
 }
