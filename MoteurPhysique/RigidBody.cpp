@@ -17,7 +17,6 @@ RigidBody::RigidBody(vecteur3D _position, vecteur3D _velocity, vecteur3D _orient
 	forceAccum = vecteur3D();
 	torqueAccum = vecteur3D();
 	dragGenerator = DragGenerator();
-	inverseInertieTensor = getInertieTensor().inverse();
 	linearDamping = _linearDamping;
 	angularDamping = _angularDamping;
 	inverseMass = 1;
