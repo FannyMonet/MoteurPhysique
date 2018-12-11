@@ -11,7 +11,8 @@ GameWorld::GameWorld()
 	resolver = ParticuleContactResolver();
 	graviteGenerator = GeneratorForceGravite();
 	dragGenerator = DragGenerator(0.2, 0.3);
-	listRectangles.emplace_back( RectangleBody(vecteur3D(0,0,0), vecteur3D(0, 0, 0.1), vecteur3D(0, 2, 0), 0.01, 0.5, vecteur3D(2, 4, 2) ));
+	listRectangles.emplace_back( RectangleBody(vecteur3D(10,0,0), vecteur3D(0, 0, 0), vecteur3D(0, 0, 0), 0.9, 0.7, vecteur3D(2, 4, 2) ));
+	listRectangles.emplace_back( RectangleBody(vecteur3D(-10,0,0), vecteur3D(5, 0, 0), vecteur3D(0, 0, 0), 0.9, 0.7, vecteur3D(2, 4, 2) ));
 }
 
 void GameWorld::update(float rate)

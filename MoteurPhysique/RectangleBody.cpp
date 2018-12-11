@@ -26,11 +26,3 @@ Matrice3 RectangleBody::getInertieTensor()
 	);
 	return tempMat;
 }
-void RectangleBody::transformPoints()
-{
-	for (int i = 0; i < 8; i++)
-	{
-		points[i] = points[i].localToWorld(transformMatrice);
-		points[0];
-	}
-}

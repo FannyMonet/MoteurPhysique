@@ -62,7 +62,6 @@ void RigidBody::Integrer(float duree)
 	updateOrientation(duree);
 	
 	calculDonneesDerivees();
-	transformPoints();
 	clearAccumulators();
 }
 void RigidBody::updatePosition(float duree)

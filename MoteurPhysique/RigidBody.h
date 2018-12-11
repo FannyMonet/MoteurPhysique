@@ -33,7 +33,6 @@ public:
 	virtual void updatePosition(float duree);
 	virtual void updateOrientation(float duree);
 	virtual float getMass() { return 1 / inverseMass; }
-	virtual void transformPoints() {};
 	virtual Matrice3 getInertieTensor() { return Matrice3(); };
 };
 
