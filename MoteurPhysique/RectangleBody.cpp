@@ -16,3 +16,5 @@ Matrice3 RectangleBody::getInertieTensor()
 					0, 0, 1 / 12 * getMass() * (dimensions.x * dimensions.x * dimensions.y * dimensions.y)
 	);
 }
+
+

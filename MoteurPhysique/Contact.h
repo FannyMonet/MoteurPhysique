@@ -1,5 +1,6 @@
 #pragma once
 #include "vecteur3D.h"
+#include "Primitive.h"
 
 class Contact
 {
