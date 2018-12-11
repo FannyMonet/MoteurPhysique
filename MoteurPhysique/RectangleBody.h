@@ -2,6 +2,7 @@
 #include "vecteur3D.h"
 #include "RigidBody.h"
 #include"DragGenerator.h"
+#include"Sphere.h"
 
 class RectangleBody : public RigidBody
 {
