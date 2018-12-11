@@ -25,6 +25,7 @@ class Octree {
 		*/
 
 public:
+	Octree() {};
 	Octree(const vecteur3D& origin, const vecteur3D& halfDimension)
 		: origin(origin), halfDimension(halfDimension), data(NULL) {
 		// Initially, there are no children

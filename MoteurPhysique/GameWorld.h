@@ -6,6 +6,7 @@
 #include "DragGenerator.h"
 #include "RectangleBody.h"
 #include "RigidBody.h"
+#include "Octree.h"
 
 class GameWorld
 {
@@ -16,6 +17,7 @@ public:
 	ParticuleContactResolver resolver;
 	GeneratorForceGravite graviteGenerator;
 	DragGenerator dragGenerator;
+	Octree octree;
 	GameWorld();
 
 	void update(float rate);
