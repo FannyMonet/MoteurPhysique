@@ -20,7 +20,8 @@ public:
 	vecteur3D Multiplication_Scalaire(float k);
 	vecteur3D addForce(vecteur3D &force);
 	vecteur3D clearAccum();
-	vecteur3D localToWorld(Matrice3);
-	vecteur3D worldToLocal(Matrice3);
+	vecteur3D localToWorld(Matrice4);
+	vecteur3D worldToLocal(Matrice4);
+	vecteur3D produitMatriciel(Matrice3 matrice);
 };
 

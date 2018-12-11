@@ -6,4 +6,4 @@
 #include <vector>
 
 void showResult(const std::vector<particule> &particules, double totalTime);
-void drawRectangle(RigidBody rectangle);
+void drawRectangle(RectangleBody rectangle);
