@@ -71,20 +71,20 @@ Matrice3 Quaternion::convertToMatrice3()
 					 (1 - (2*x*x + 2*y*y))
 	);
 }
-Matrice4 Quaternion::convertToMatrice4()
+Matrice4 Quaternion::convertToMatrice4(vecteur3D position)
 {
-	return Matrice4(1 - (2 * y*y + 2 * z*z),
-		2 * x*y - 2 * z*w,
-		2 * x*z - 2 * y*w,
-		x,
-		2 * x*y - 2 * z*w,
-		1 - (2 * x*x + 2 * z*z),
-		2 * y*z + 2 * x*w,
-		y,
-		2 * x*z + 2 * y*w,
-		2 * y*z - 2 * x*w,
-		(1 - (2 * x*x + 2 * y*y)),
-		z
+	return Matrice4(	1 - (2 * y*y + 2 * z*z),
+						2 * x*y - 2 * z*w,
+						2 * x*z - 2 * y*w,
+						position.x,
+						2 * x*y - 2 * z*w,
+						1 - (2 * x*x + 2 * z*z),
+						2 * y*z + 2 * x*w,
+						position.y,
+						2 * x*z + 2 * y*w,
+						2 * y*z - 2 * x*w,
+						(1 - (2 * x*x + 2 * y*y)),
+						position.z
 	);
 }
 void Quaternion::updateVelociteAngulaire(vecteur3D velocite, float temps)

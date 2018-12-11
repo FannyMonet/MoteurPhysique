@@ -9,6 +9,14 @@ RectangleBody::RectangleBody(vecteur3D _position, vecteur3D _velocity, vecteur3D
 {
 	dimensions = dim;
 	inverseInertieTensor = this->getInertieTensor().inverse();
+	points[0] = vecteur3D(position.x + dimensions.x / 2, position.x + dimensions.y / 2, position.x + dimensions.z / 2);
+	points[1] = vecteur3D(position.x + dimensions.x / 2, position.x + dimensions.y / 2, position.x - dimensions.z / 2);
+	points[2] = vecteur3D(position.x + dimensions.x / 2, position.x - dimensions.y / 2, position.x + dimensions.z / 2);
+	points[3] = vecteur3D(position.x + dimensions.x / 2, position.x - dimensions.y / 2, position.x - dimensions.z / 2);
+	points[4] = vecteur3D(position.x - dimensions.x / 2, position.x + dimensions.y / 2, position.x + dimensions.z / 2);
+	points[5] = vecteur3D(position.x - dimensions.x / 2, position.x + dimensions.y / 2, position.x - dimensions.z / 2);
+	points[6] = vecteur3D(position.x - dimensions.x / 2, position.x - dimensions.y / 2, position.x + dimensions.z / 2);
+	points[7] = vecteur3D(position.x - dimensions.x / 2, position.x - dimensions.y / 2, position.x - dimensions.z / 2);
 }
 Matrice3 RectangleBody::getInertieTensor()
 {
@@ -20,17 +28,9 @@ Matrice3 RectangleBody::getInertieTensor()
 }
 void RectangleBody::transformPoints()
 {
-	points[0] = vecteur3D(position.x + dimensions.x / 2, position.x + dimensions.y / 2, position.x + dimensions.z / 2);
-	points[1] = vecteur3D(position.x + dimensions.x / 2, position.x + dimensions.y / 2, position.x - dimensions.z / 2);
-	points[2] = vecteur3D(position.x + dimensions.x / 2, position.x - dimensions.y / 2, position.x + dimensions.z / 2);
-	points[3] = vecteur3D(position.x + dimensions.x / 2, position.x - dimensions.y / 2, position.x - dimensions.z / 2);
-	points[4] = vecteur3D(position.x - dimensions.x / 2, position.x + dimensions.y / 2, position.x + dimensions.z / 2);
-	points[5] = vecteur3D(position.x - dimensions.x / 2, position.x + dimensions.y / 2, position.x - dimensions.z / 2);
-	points[6] = vecteur3D(position.x - dimensions.x / 2, position.x - dimensions.y / 2, position.x + dimensions.z / 2);
-	points[7] = vecteur3D(position.x - dimensions.x / 2, position.x - dimensions.y / 2, position.x - dimensions.z / 2);
-
 	for (int i = 0; i < 8; i++)
 	{
 		points[i] = points[i].localToWorld(transformMatrice);
+		points[0];
 	}
 }

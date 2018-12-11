@@ -18,6 +18,6 @@ public:
 	void effectuerRotation(vecteur3D v);
 	void updateVelociteAngulaire(vecteur3D velocite, float temps);
 	Matrice3 convertToMatrice3();
-	Matrice4 convertToMatrice4();
+	Matrice4 convertToMatrice4(vecteur3D rotation);
 };
 

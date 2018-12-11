@@ -13,7 +13,7 @@ RigidBody::RigidBody(vecteur3D _position, vecteur3D _velocity, vecteur3D _orient
 	velocity = _velocity;
 	rotation = _rotation;
 	orientation = toQuaternion(_orientation);
-	transformMatrice = orientation.convertToMatrice4();
+	transformMatrice = orientation.convertToMatrice4(position);
 	forceAccum = vecteur3D();
 	torqueAccum = vecteur3D();
 	dragGenerator = DragGenerator();
@@ -25,7 +25,7 @@ RigidBody::RigidBody(vecteur3D _position, vecteur3D _velocity, vecteur3D _orient
 
 void RigidBody::calculDonneesDerivees()
 {
-	transformMatrice = orientation.convertToMatrice4();
+	transformMatrice = orientation.convertToMatrice4(position);
 	Matrice3 transformMatrice3 = Matrice3(	transformMatrice.coef[0], transformMatrice.coef[1], transformMatrice.coef[2],
 											transformMatrice.coef[4], transformMatrice.coef[5], transformMatrice.coef[6],
 											transformMatrice.coef[8], transformMatrice.coef[9], transformMatrice.coef[10]);
