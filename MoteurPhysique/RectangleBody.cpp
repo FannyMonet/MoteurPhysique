@@ -5,7 +5,7 @@
 using namespace std;
 
 RectangleBody::RectangleBody(){}
-RectangleBody::RectangleBody(vecteur3D _position, vecteur3D _velocity, vecteur3D _orientation, vecteur3D _rotation, float _linearDamping, float _angularDamping, vecteur3D dim) : RigidBody(_position, _velocity, _orientation, _rotation, _linearDamping, _angularDamping)
+RectangleBody::RectangleBody(vecteur3D _position, vecteur3D _velocity, vecteur3D _rotation, float _linearDamping, float _angularDamping, vecteur3D dim) : RigidBody(_position, _velocity, _rotation, _linearDamping, _angularDamping)
 {
 	dimensions = dim;
 	inverseInertieTensor = this->getInertieTensor().inverse();

@@ -23,7 +23,7 @@ public:
 	vecteur3D* points;
 
 	RigidBody();
-	RigidBody(vecteur3D position, vecteur3D velocity, vecteur3D orientation, vecteur3D rotation, float linearDamping, float angularDamping);
+	RigidBody(vecteur3D position, vecteur3D velocity, vecteur3D rotation, float linearDamping, float angularDamping);
 
 	virtual void calculDonneesDerivees();
 	virtual void addForceAtPoint(vecteur3D force, vecteur3D point);
@@ -35,7 +35,5 @@ public:
 	virtual float getMass() { return 1 / inverseMass; }
 	virtual void transformPoints() {};
 	virtual Matrice3 getInertieTensor() { return Matrice3(); };
-	Quaternion toQuaternion(vecteur3D orientation);
-	vecteur3D toEulerAngle(const Quaternion& q);
 };
 
