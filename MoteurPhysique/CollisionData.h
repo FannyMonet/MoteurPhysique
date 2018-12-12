@@ -5,7 +5,13 @@ class CollisionData
 {
 public:
 	Contact* contacts;
-	int contactsRestant;
+	int contactsRestant =0;
 	CollisionData();
+	void AddContact(Contact	newContact) {
+		contactsRestant++;
+		contacts[contactsRestant] = newContact;
+	}
+	
+	
 };
 
