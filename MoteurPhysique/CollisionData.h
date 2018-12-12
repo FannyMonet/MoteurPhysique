@@ -7,10 +7,8 @@ public:
 	Contact* contacts;
 	int contactsRestant =0;
 	CollisionData();
-	void AddContact(Contact	newContact) {
-		contactsRestant++;
-		contacts[contactsRestant] = newContact;
-	}
+	void AddContact(Contact	newContact);
+	bool ContactNull();
 	
 	
 };
