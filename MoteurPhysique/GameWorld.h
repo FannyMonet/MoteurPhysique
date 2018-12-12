@@ -21,6 +21,7 @@ public:
 	GeneratorForceGravite graviteGenerator;
 	DragGenerator dragGenerator;
 	Octree *octree;
+	OctreePoint *octreePoints;
 	CollisionData collisionData;
 	GameWorld();
 	Plane planes;
