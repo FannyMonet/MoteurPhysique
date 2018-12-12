@@ -9,6 +9,7 @@
 #include "Octree.h"
 #include "CollisionData.h"
 #include "Primitive.h"
+#include "Plane.h"
 
 class GameWorld
 {
@@ -19,10 +20,10 @@ public:
 	ParticuleContactResolver resolver;
 	GeneratorForceGravite graviteGenerator;
 	DragGenerator dragGenerator;
-	Octree octree;
+	Octree *octree;
 	CollisionData collisionData;
 	GameWorld();
-
+	Plane planes;
 	void update(float rate);
 	void integrer(float rate);
 	void generateContacts(Primitive prim1, Primitive prim2, CollisionData * data);

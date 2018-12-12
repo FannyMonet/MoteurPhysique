@@ -93,7 +93,7 @@ public:
 					newOrigin.x += halfDimension.x * (i & 4 ? .5f : -.5f);
 					newOrigin.y += halfDimension.y * (i & 2 ? .5f : -.5f);
 					newOrigin.z += halfDimension.z * (i & 1 ? .5f : -.5f);
-					children[i] = new Octree(newOrigin, vecteur3D(halfDimension.x*.5f, halfDimension.y*.5f, halfDimension.z*.5f));
+					children[i] = new Octree(newOrigin, vecteur3D(halfDimension.x*0.5f, halfDimension.y*0.5f, halfDimension.z*0.5f));
 				}
 
 				// Re-insert the old point, and insert this new point
