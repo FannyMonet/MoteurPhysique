@@ -4,6 +4,8 @@
 #include "OctreePoint.h"
 #include "vecteur3D.h"
 
+// code repris du cours de moteur de jeux video avec l'aide d'un tutoriel sur internet
+
 class Octree {
 	// Physical position/size. This implicitly defines the bounding 
 	// box of this node

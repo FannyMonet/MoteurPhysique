@@ -41,7 +41,7 @@ void GameWorld::integrer(float rate)
 	vector<OctreePoint*> results;
 	
 	octree->getPointsInsideBox(vecteur3D(-12.25, -12.25, -12.25), vecteur3D(12.25, 12.25, 12.25), results);
-	octree;
+	
 
 }
 

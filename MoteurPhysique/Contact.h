@@ -9,5 +9,6 @@ public:
 	vecteur3D contactPoint;
 	vecteur3D normale;
 	float interpenetration;
+
 };
 
