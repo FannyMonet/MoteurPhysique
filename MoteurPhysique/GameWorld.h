@@ -7,6 +7,8 @@
 #include "RectangleBody.h"
 #include "RigidBody.h"
 #include "Octree.h"
+#include "CollisionData.h"
+#include "Primitive.h"
 
 class GameWorld
 {
@@ -18,9 +20,11 @@ public:
 	GeneratorForceGravite graviteGenerator;
 	DragGenerator dragGenerator;
 	Octree octree;
+	CollisionData collisionData;
 	GameWorld();
 
 	void update(float rate);
 	void integrer(float rate);
+	void generateContacts(Primitive prim1, Primitive prim2, CollisionData * data);
 };
 

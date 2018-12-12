@@ -4,7 +4,7 @@
 class CollisionData
 {
 public:
-	Contact* contact;
+	Contact* contacts;
 	int contactsRestant;
 	CollisionData();
 };

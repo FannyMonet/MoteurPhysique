@@ -6,5 +6,3 @@ Contact::Contact()
 {
 }
 
-void generateContacts(Primitive prim1, Primitive prim2, CollisionData * data) {
-};

@@ -3,4 +3,5 @@
 
 CollisionData::CollisionData()
 {
+	contacts = new Contact[100];
 }
